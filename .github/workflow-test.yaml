@@ -1,0 +1,11 @@
+name: Adding Bots Job
+on: [push]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Display working directory
+        run: |
+          Get-Location
+          dir
+          echo $env:GITHAB_SHA
