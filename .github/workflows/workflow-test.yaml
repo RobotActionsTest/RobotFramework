@@ -2,7 +2,7 @@ name: Adding Bots Job
 on: [push]
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-2019
     steps:
       - name: Display working directory
         run: |
