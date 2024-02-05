@@ -5,7 +5,7 @@ on:
 
 defaults:
   run:
-    shell: bash
+    shell: pwsh
 
 jobs:
   build:
@@ -20,6 +20,6 @@ jobs:
           python-version: 3.8
 
       - name: Change directory and run Python script
-        working-directory: /d/a/RobotFramework/RobotFramework/scripts
         run: |
-          pwd
+          Get-Location
+          cd C:\Users\Professional\PycharmProjects\RobotFramework\scripts
