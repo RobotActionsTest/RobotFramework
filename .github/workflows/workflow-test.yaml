@@ -21,5 +21,4 @@ jobs:
 
       - name: Change directory and run Python script
         run: |
-          Get-Location
-          cd C:\Users\Professional\PycharmProjects\RobotFramework\scripts
+          python test.py
