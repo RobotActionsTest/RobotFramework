@@ -1,0 +1,5 @@
+# Ignore common file types
+*.png
+*.log
+*.html
+*.xml
