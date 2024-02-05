@@ -10,8 +10,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Set working directory
-        run: |
-          cd C:\Users\Professional\PycharmProjects\RobotFramework\scripts
-      - name: Run Python script
-        run: python test.py
+      - name: Set up Python
+          uses: actions/setup-python@v2
+          with:
+            python-version: 3.8
+      - name: Change directory and run Python script
+          run: |
+            cd C:\Users\Professional\PycharmProjects\RobotFramework\scripts
+            python test.py
