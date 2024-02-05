@@ -20,6 +20,9 @@ jobs:
             python -m pip install --upgrade pip
             python -m pip install -r requirement.txt
 
+        - name: Run setup.bat
+          run: .\setup.bat
+
         - name: Run Test
           run: |
             python -m robot --outputdir reports --include NewAppPopup "tests/AddBots.robot"

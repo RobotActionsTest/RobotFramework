@@ -1,5 +1,2 @@
 robotframework
 robotframework-seleniumlibrary
-webdrivermanager
-webdriver-manager firefox
-webdriver-manager chrome
