@@ -14,22 +14,23 @@ jobs:
           with:
             path: ~/.cache/pip
             key: ${{ runner.os }}-pip-${{ hashFiles('**/requirement.txt') }}
+
         - name: Install pip dependencies
           run: |
-            pip install --upgrade pip
-            pip install -r requirement.txt
+            python -m pip install --upgrade pip
+            python -m pip install -r requirements.txt
+
         - name: Run Test
           run: |
-            python -m robot --include NewAppPopup "tests/AddBots.robot"
+            python -m robot --outputdir reports --include NewAppPopup "tests/AddBots.robot"
           working-directory: ${{ github.workspace }}
 
-        # - name: If Auto Test Pass Rate Not 100%, Job Will Fail
-        #   if: env.ROBOT_RC != '0'
-        #   run: |
-        #     echo "Auto Test Pass Rate Not 100%, Please Check Test Result"
-        #     exit 1
+        - name: Run Robot Framework tests and create report
+            run: python -m robot -d reports -x junit-report.xml "tests"
+            working-directory: ${{ github.workspace }}
+
         - name: Publish test results
-          uses: actions/upload-artifact@v2
-          with:
-            name: robot-test-results
-            path: results
+            uses: actions/upload-artifact@v2
+            with:
+              name: robot-test-results
+              path: reports
