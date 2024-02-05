@@ -27,7 +27,7 @@ jobs:
 
         - name: Run Robot Framework tests and create report
           run: |
-          python -m robot -d reports -x junit-report.xml "tests"
+            python -m robot -d reports -x junit-report.xml "tests"
           working-directory: ${{ github.workspace }}
 
         - name: Publish test results
