@@ -19,7 +19,7 @@ jobs:
             pip install --upgrade pip
             pip install -r requirement.txt
         - name: Run Test
-          run: python -m robot --include NewAppPopup AddBots.robot
+          run: python -m robot --include NewAppPopup /tests/AddBots.robot
         # - name: If Auto Test Pass Rate Not 100%, Job Will Fail
         #   if: env.ROBOT_RC != '0'
         #   run: |
