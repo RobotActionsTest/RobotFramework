@@ -15,7 +15,7 @@ Setup Chrome Webdriver
     Call Method    ${options}    add_argument    --disable-extensions
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --start-maximized
-    Open Browser    https://pre.bonp.me//member    chrome    options=${options}
+    Open Browser    https://pre.bonp.me//member    chrome    options=${options}   executable_path= "../drivers/chromedriver.exe"
     Set Selenium Implicit Wait    15s
 
 Setup Firefox Webdriver
@@ -24,7 +24,7 @@ Setup Firefox Webdriver
     Call Method    ${options}    add_argument    --disable-infobars
     Call Method    ${options}    add_argument    --disable-extensions
     Call Method    ${options}    add_argument    --start-maximized
-    Open Browser    https://pre.bonp.me//member    firefox    options=${options}   executable_path=C:\Users\Professional\Downloads\geckodriver-v0.34.0-win-aarch64
+    Open Browser    https://pre.bonp.me//member    firefox    options=${options}   executable_path= "../drivers/geckodriver.exe"
     Set Selenium Implicit Wait    15s
 
 Login
