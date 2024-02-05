@@ -3,27 +3,15 @@ on:
   workflow_dispatch:
 defaults:
   run:
-    shell: bash
+    shell: cmd
 jobs:
   build:
     runs-on: windows-latest
     steps:
-      - name: Display working directory
-        run: |
-          pwd
-          echo $GITHAB_SHA
-
       - name: Checkout code
         uses: actions/checkout@v2
-
       - name: Set working directory
         run: |
-          cd /d/a/RobotFramework/RobotFramework/scripts
-
-      - name: Display working directory
-        run: |
-          pwd
-          echo $GITHAB_SHA
-
+          cd C:\Users\Professional\PycharmProjects\RobotFramework\scripts
       - name: Run Python script
         run: python test.py
