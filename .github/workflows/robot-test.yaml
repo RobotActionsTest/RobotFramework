@@ -13,18 +13,13 @@ jobs:
           id: cache
           with:
             path: ~/.cache/pip
-            key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+            key: ${{ runner.os }}-pip-${{ hashFiles('**/requirement.txt') }}
         - name: Install pip dependencies
           run: |
             pip install --upgrade pip
             pip install -r requirement.txt
         - name: Run Test
-          run: python -m robot --outputdir results reports
-        - name: Run Test and create report
           run: python -m robot --include NewAppPopup AddBots.robot
-        - name: Run Robot Framework tests and generate report
-          run: |
-             echo "ROBOT_RC=$?" >> "$GITHUB_ENV"
         # - name: If Auto Test Pass Rate Not 100%, Job Will Fail
         #   if: env.ROBOT_RC != '0'
         #   run: |
