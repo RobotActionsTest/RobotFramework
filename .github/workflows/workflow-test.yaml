@@ -19,10 +19,6 @@ jobs:
         with:
           python-version: 3.8
 
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt  # replace with your actual requirements file if needed
-
       - name: Change directory and run Python script
         run: |
           cd C:\Users\Professional\PycharmProjects\RobotFramework\scripts
