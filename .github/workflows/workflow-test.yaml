@@ -10,7 +10,8 @@ jobs:
     steps:
       - name: Display working directory
         run: |
-          Get-Location
+          pwd
+          echo $GITHAB_SHA
 
       - name: Checkout code
         uses: actions/checkout@v2
@@ -21,7 +22,8 @@ jobs:
 
       - name: Display working directory
         run: |
-          Get-Location
+          pwd
+          echo $GITHAB_SHA
 
       - name: Run Python script
         run: python test.py
