@@ -20,7 +20,7 @@ jobs:
             pip install -r requirement.txt
         - name: Run Test
           run: |
-          python -m robot --include NewAppPopup "C:/Users/Professional/PycharmProjects/RobotFramework/tests/AddBots.robot"
+            python -m robot --include NewAppPopup "C:/Users/Professional/PycharmProjects/RobotFramework/tests/AddBots.robot"
           working-directory: C:/Users/Professional/PycharmProjects/RobotFramework
 
         # - name: If Auto Test Pass Rate Not 100%, Job Will Fail
