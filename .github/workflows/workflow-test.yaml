@@ -18,7 +18,7 @@ jobs:
 
       - name: Set working directory
         run: |
-          cd C:\Users\Professional\PycharmProjects\RobotFramework\scripts
+          cd /c/Users/Professional/PycharmProjects/RobotFramework/scripts
 
       - name: Display working directory
         run: |
