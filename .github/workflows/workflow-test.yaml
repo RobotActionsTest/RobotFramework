@@ -1,11 +1,27 @@
 name: Adding Bots Job
-on: [push]
+on:
+  workflow_dispatch:
+defaults:
+  run:
+    shell: bash
 jobs:
   build:
-    runs-on: windows-2019
+    runs-on: windows-latest
     steps:
       - name: Display working directory
         run: |
           Get-Location
-          dir
-          echo $env:GITHAB_SHA
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set working directory
+        run: |
+          cd C:\Users\Professional\PycharmProjects\RobotFramework\scripts
+
+      - name: Display working directory
+        run: |
+          Get-Location
+
+      - name: Run Python script
+        run: python test.py
