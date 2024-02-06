@@ -108,6 +108,5 @@ Adding a "big" button to a text item (textitem1)
     Input Text    ${big_button_name_input_field}    ${my_big_button_text}
     Click Button    ${save_button_settings}
 
-Adding a 'Quick reaction' buttons to a text item (textitem2)
 
 
