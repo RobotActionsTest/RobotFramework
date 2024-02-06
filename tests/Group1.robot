@@ -11,7 +11,7 @@ Creating a New Chat Group
 
     [Documentation]    This test adds group1 to a BR V2 API1.0 bot
     [Tags]   AppTab   API1.0   Regression   Test1
-    [Setup]    Setup Chrome Webdriver
+    [Setup]    Setup Chrome Webdriver and Access URL
                Login   ${credentials}[email]   ${credentials}[password]
                Open Specified Bot   ${bot_names_list}   ${my_api10_bot_name}
     [Teardown]    Close Browser
@@ -36,7 +36,7 @@ Creating text items (actions)
 
     [Documentation]    This test adds textitem1, textitem2, textitem3, textitem4 text actions to group1
     [Tags]    AppTab    API1.0    Regression    Test1
-    [Setup]    Setup Chrome Webdriver
+    [Setup]    Setup Chrome Webdriver and Access URL
                Login    ${credentials}[email]    ${credentials}[password]
                Open Specified Bot    ${bot_names_list}    ${my_api10_bot_name}
     [Teardown]    Close Browser
@@ -64,7 +64,7 @@ Entering text in the text field
 
     [Documentation]    This test enters "text1"-"text4" in the text fields of the created text items
     [Tags]    AppTab    API1.0    Regression    Test1
-    [Setup]    Setup Chrome Webdriver
+    [Setup]    Setup Chrome Webdriver and Access URL
                Login    ${credentials}[email]    ${credentials}[password]
                Open Specified Bot    ${bot_names_list}    ${my_api10_bot_name}
     [Teardown]    Close Browser
@@ -86,7 +86,7 @@ Adding a "big" button to a text item (textitem1)
 
     [Documentation]    This test adds a "big" button to text item 1 in the chatflow action.
     [Tags]    AppTab    API1.0    Regression    Test1
-    [Setup]    Setup Chrome Webdriver
+    [Setup]    Setup Chrome Webdriver and Access URL
                Login    ${credentials}[email]    ${credentials}[password]
                Open Specified Bot    ${bot_names_list}    ${my_api10_bot_name}
     [Teardown]    Close Browser
@@ -108,9 +108,6 @@ Adding a "big" button to a text item (textitem1)
     Input Text    ${big_button_name_input_field}    ${my_big_button_text}
     Click Button    ${save_button_settings}
 
-
-
-
-#Adding a 'Quick reaction' buttons to a text item (textitem2)
+Adding a 'Quick reaction' buttons to a text item (textitem2)
 
 

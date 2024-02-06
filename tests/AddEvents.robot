@@ -17,7 +17,7 @@ add Events to API1.0 bot
 
     [Documentation]    This test adds 3 events (event1 and event2 application period has already started) to a BR V2 API1.0 bot
     [Tags]   EventsTab   API1.0   Regression
-    [Setup]    Setup Chrome Webdriver
+    [Setup]    Setup Chrome Webdriver and Access URL
                Login   ${credentials}[email]   ${credentials}[password]
                Open Specified Bot   ${bot_names_list}   ${my_api10_bot_name}
     [Teardown]    Close Browser
@@ -83,7 +83,7 @@ add Events to API2.0 bot
 
     [Documentation]    This test adds 3 events (event1 and event2 application period has already started) to a BR V2 API2.0 bot
     [Tags]   EventsTab   API2.0   Regression
-    [Setup]    Setup Chrome Webdriver
+    [Setup]    Setup Chrome Webdriver and Access URL
                Login   ${credentials}[email]   ${credentials}[password]
                Open Specified Bot   ${bot_names_list}   ${my_api20_bot_name}
     [Teardown]    Close Browser

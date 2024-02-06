@@ -1,4 +1,4 @@
-name: Robot Framework Test Adding Bots
+name: Robot Framework Test Adding Events
 
 on:
   workflow_dispatch:
@@ -22,7 +22,7 @@ jobs:
 
         - name: Run Test
           run: |
-            python -m robot --outputdir reports -x junit-report.xml --include NewAppPopup "tests/AddBots.robot"
+            python -m robot --outputdir reports -x junit-report.xml --include EventsTab "tests/AddEvents.robot"
           working-directory: ${{ github.workspace }}
 
         - name: Publish test results

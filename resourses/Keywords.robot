@@ -8,37 +8,6 @@ Library   driversync.py
 
 *** Keywords ***
 
-Setup ChromeWebDriver With Options And Access URL
-    [Arguments]    ${url}
-    ${chromedriver_path}=    driversync.Get Chromedriver Path
-    ${options}=    Create Chrome Options With Arguments
-    Create Webdriver    Chrome    executable_path=${chromedriver_path}    options=${options}
-    Go to    ${url}
-
-Setup FirefoxWebDriver With Options And Access URL
-    [Arguments]    ${url}
-    ${geckodriver_path}=    driversync.Get Geckodriver Path
-    ${options}=    Create Firefox Options With Arguments
-    Create Webdriver    Firefox    executable_path=${geckodriver_path}    options=${options}
-    Go to    ${url}
-
-Create Chrome Options With Arguments
-    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
-    Call Method    ${options}    add_argument    --disable-notifications
-    Call Method    ${options}    add_argument    --disable-infobars
-    Call Method    ${options}    add_argument    --disable-extensions
-    Call Method    ${options}    add_argument    --no-sandbox
-    Call Method    ${options}    add_argument    --start-maximized
-    [RETURN]    ${options}
-
-Create Firefox Options With Arguments
-    ${options}=    Evaluate    sys.modules['selenium.webdriver'].FirefoxOptions()    sys
-    Call Method    ${options}    add_argument    --disable-notifications
-    Call Method    ${options}    add_argument    --disable-infobars
-    Call Method    ${options}    add_argument    --disable-extensions
-    Call Method    ${options}    add_argument    --start-maximized
-    [RETURN]    ${options}
-
 Setup Chrome Webdriver and Access URL
     ${chromedriver_path}=   driversync.Get Chromedriver Path
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
@@ -60,6 +29,7 @@ Setup Firefox Webdriver and Access URL
     Call Method    ${options}    add_argument    --start-maximized
     Open Browser    https://pre.bonp.me//member    browser=firefox    options=${options}   executable_path=${geckodriver_path}
     Set Selenium Implicit Wait    15s
+
 
 Login
     [Arguments]    ${username}    ${password}
@@ -83,6 +53,7 @@ Open Specified Bot
     END
     Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
 
+
 Open Bot 1
     [Arguments]   ${my_bot_name}   ${my_locator}
     Wait Until Element Is Visible and Enabled   ${my_locator}
@@ -92,6 +63,7 @@ Open Bot 1
         Run Keyword If    '${my_bot_name}' in '${text}'    Click Element    ${element}
     END
     Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
+
 
 Click Element with Specified Text
     [Arguments]   ${my_elements_locator}   ${target_text}
@@ -107,6 +79,7 @@ Wait Until Element Is Visible and Enabled
     Wait Until Element Is Visible    ${locator}    timeout=${timeout}
     Wait Until Element Is Enabled    ${locator}    timeout=${timeout}
 
+
 Select Option With Specified Text
     [Arguments]    ${table_xpath}    ${expected_text}    ${timeout}=30s
     ${cell_list} =    Get WebElements    ${table_xpath}
@@ -118,10 +91,12 @@ Select Option With Specified Text
         Log    Clicked cell with text '${expected_text}'
     END
 
+
 Type In And Press Enter
     [Arguments]   ${locator}   ${text}
     Input Text    ${new_group_name}    ${text}
     Press Keys    ${new_group_name}    ENTER
+
 
 Clear, Type In And Press Enter
     [Arguments]   ${locator}   ${text}
