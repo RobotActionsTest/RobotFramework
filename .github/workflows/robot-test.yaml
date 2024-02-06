@@ -25,12 +25,7 @@ jobs:
 
         - name: Run Test
           run: |
-            python -m robot --outputdir reports --include NewAppPopup "tests/AddBots.robot"
-          working-directory: ${{ github.workspace }}
-
-        - name: Run Robot Framework tests and create report
-          run: |
-            python -m robot -d reports -x junit-report.xml "tests"
+            python -m robot --outputdir reports -x junit-report.xml --include NewAppPopup "tests/AddBots.robot
           working-directory: ${{ github.workspace }}
 
         - name: Publish test results
