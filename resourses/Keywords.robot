@@ -4,27 +4,61 @@ Resource    Variables.robot
 Library    SeleniumLibrary
 Library    OperatingSystem
 Library    DateTime
-
+Library   driversync.py
 
 *** Keywords ***
 
-Setup Chrome Webdriver
+Setup ChromeWebDriver With Options And Access URL
+    [Arguments]    ${url}
+    ${chromedriver_path}=    driversync.Get Chromedriver Path
+    ${options}=    Create Chrome Options With Arguments
+    Create Webdriver    Chrome    executable_path=${chromedriver_path}    options=${options}
+    Go to    ${url}
+
+Setup FirefoxWebDriver With Options And Access URL
+    [Arguments]    ${url}
+    ${geckodriver_path}=    driversync.Get Geckodriver Path
+    ${options}=    Create Firefox Options With Arguments
+    Create Webdriver    Firefox    executable_path=${geckodriver_path}    options=${options}
+    Go to    ${url}
+
+Create Chrome Options With Arguments
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
     Call Method    ${options}    add_argument    --disable-notifications
     Call Method    ${options}    add_argument    --disable-infobars
     Call Method    ${options}    add_argument    --disable-extensions
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --start-maximized
-    Open Browser    https://pre.bonp.me//member    chrome    options=${options}   executable_path= "../drivers/chromedriver.exe"
-    Set Selenium Implicit Wait    15s
+    [Return]    ${options}
 
-Setup Firefox Webdriver
+Create Firefox Options With Arguments
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].FirefoxOptions()    sys
     Call Method    ${options}    add_argument    --disable-notifications
     Call Method    ${options}    add_argument    --disable-infobars
     Call Method    ${options}    add_argument    --disable-extensions
     Call Method    ${options}    add_argument    --start-maximized
-    Open Browser    https://pre.bonp.me//member    firefox    options=${options}   executable_path= "../drivers/geckodriver.exe"
+    [Return]    ${options}
+
+Setup Chrome Webdriver and Access URL
+    ${chromedriver_path}=   driversync.Get Chromedriver Path
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
+    Call Method    ${options}    add_argument    --disable-notifications
+    Call Method    ${options}    add_argument    --disable-infobars
+    Call Method    ${options}    add_argument    --disable-extensions
+    Call Method    ${options}    add_argument    --no-sandbox
+    Call Method    ${options}    add_argument    --start-maximized
+    Open Browser    https://pre.bonp.me//member    browser=chrome    options=${options}   executable_path=${chromedriver_path}
+    Set Selenium Implicit Wait    15s
+
+
+Setup Firefox Webdriver and Access URL
+    ${geckodriver_path}=   driversync.Get Geckodriver Path
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].FirefoxOptions()    sys
+    Call Method    ${options}    add_argument    --disable-notifications
+    Call Method    ${options}    add_argument    --disable-infobars
+    Call Method    ${options}    add_argument    --disable-extensions
+    Call Method    ${options}    add_argument    --start-maximized
+    Open Browser    https://pre.bonp.me//member    browser=firefox    options=${options}   executable_path=${geckodriver_path}
     Set Selenium Implicit Wait    15s
 
 Login

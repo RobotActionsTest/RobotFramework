@@ -1,59 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.10 on win32)" generated="20240205 19:09:03.179" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.10.10 on win32)" generated="20240206 13:29:34.336" rpa="false" schemaversion="4">
 <suite id="s1" name="AddBots" source="C:\Users\Professional\PycharmProjects\RobotFramework\tests\AddBots.robot">
 <test id="s1-t1" name="create API1.0 bot" line="8">
-<kw name="Setup Firefox Webdriver" library="Keywords" type="SETUP">
+<kw name="Setup Chrome Webdriver and Access URL" library="Keywords" type="SETUP">
+<kw name="Get Chromedriver Path" library="driversync">
+<var>${chromedriver_path}</var>
+<msg timestamp="20240206 13:29:34.580" level="INFO">====== WebDriver manager ======</msg>
+<msg timestamp="20240206 13:29:35.159" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg timestamp="20240206 13:29:36.479" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg timestamp="20240206 13:29:36.596" level="INFO">Driver [C:\Users\Professional\.wdm\drivers\chromedriver\win64\121.0.6167.85\chromedriver-win32/chromedriver.exe] found in cache</msg>
+<msg timestamp="20240206 13:29:36.596" level="INFO">C:\Users\Professional\.wdm\drivers\chromedriver\win64\121.0.6167.85\chromedriver-win32/chromedriver.exe</msg>
+<msg timestamp="20240206 13:29:36.597" level="INFO">${chromedriver_path} = C:\Users\Professional\.wdm\drivers\chromedriver\win64\121.0.6167.85\chromedriver-win32/chromedriver.exe</msg>
+<status status="PASS" starttime="20240206 13:29:34.580" endtime="20240206 13:29:36.597"/>
+</kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${options}</var>
-<arg>sys.modules['selenium.webdriver'].FirefoxOptions()</arg>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240205 19:09:03.372" level="INFO">${options} = &lt;selenium.webdriver.firefox.options.Options object at 0x00000184BE516B00&gt;</msg>
-<status status="PASS" starttime="20240205 19:09:03.371" endtime="20240205 19:09:03.374"/>
+<msg timestamp="20240206 13:29:36.597" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00000295C2C85CC0&gt;</msg>
+<status status="PASS" starttime="20240206 13:29:36.597" endtime="20240206 13:29:36.597"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-notifications</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240205 19:09:03.374" endtime="20240205 19:09:03.374"/>
+<status status="PASS" starttime="20240206 13:29:36.598" endtime="20240206 13:29:36.598"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-infobars</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240205 19:09:03.375" endtime="20240205 19:09:03.375"/>
+<status status="PASS" starttime="20240206 13:29:36.598" endtime="20240206 13:29:36.598"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-extensions</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240205 19:09:03.375" endtime="20240205 19:09:03.375"/>
+<status status="PASS" starttime="20240206 13:29:36.598" endtime="20240206 13:29:36.598"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240206 13:29:36.599" endtime="20240206 13:29:36.599"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--start-maximized</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240205 19:09:03.376" endtime="20240205 19:09:03.376"/>
+<status status="PASS" starttime="20240206 13:29:36.599" endtime="20240206 13:29:36.599"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://pre.bonp.me//member</arg>
-<arg>firefox</arg>
+<arg>browser=chrome</arg>
 <arg>options=${options}</arg>
-<arg>executable_path= "../drivers/geckodriver.exe"</arg>
+<arg>executable_path=${chromedriver_path}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240205 19:09:03.377" level="INFO">Opening browser 'firefox' to base url 'https://pre.bonp.me//member'.</msg>
-<status status="PASS" starttime="20240205 19:09:03.376" endtime="20240205 19:09:09.481"/>
+<msg timestamp="20240206 13:29:36.600" level="INFO">Opening browser 'chrome' to base url 'https://pre.bonp.me//member'.</msg>
+<status status="PASS" starttime="20240206 13:29:36.599" endtime="20240206 13:29:38.376"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>15s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20240205 19:09:09.482" endtime="20240205 19:09:09.536"/>
+<status status="PASS" starttime="20240206 13:29:38.376" endtime="20240206 13:29:38.379"/>
 </kw>
-<status status="PASS" starttime="20240205 19:09:03.371" endtime="20240205 19:09:09.536"/>
+<status status="PASS" starttime="20240206 13:29:34.580" endtime="20240206 13:29:38.379"/>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <var>${checkbox_values}</var>
@@ -79,15 +96,15 @@
 <arg>ms365</arg>
 <arg>files</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20240205 19:09:09.538" level="INFO">${checkbox_values} = ['crm', 'events', 'coupons', 'catalog', 'rms', 'chat', 'ec', 'mail', 'stores', 'campaign', 'elgana', 'g_events', 'bot_posts', 'user_logs', 'linepoints', 'sfa_salesforce', 'sfa_hubspot', 'lp', 'stamp_c...</msg>
-<status status="PASS" starttime="20240205 19:09:09.537" endtime="20240205 19:09:09.538"/>
+<msg timestamp="20240206 13:29:38.380" level="INFO">${checkbox_values} = ['crm', 'events', 'coupons', 'catalog', 'rms', 'chat', 'ec', 'mail', 'stores', 'campaign', 'elgana', 'g_events', 'bot_posts', 'user_logs', 'linepoints', 'sfa_salesforce', 'sfa_hubspot', 'lp', 'stamp_c...</msg>
+<status status="PASS" starttime="20240206 13:29:38.380" endtime="20240206 13:29:38.380"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${my_company_name}</var>
 <arg>Evolany Co., Ltd.</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240205 19:09:09.539" level="INFO">${my_company_name} = Evolany Co., Ltd.</msg>
-<status status="PASS" starttime="20240205 19:09:09.538" endtime="20240205 19:09:09.539"/>
+<msg timestamp="20240206 13:29:38.381" level="INFO">${my_company_name} = Evolany Co., Ltd.</msg>
+<status status="PASS" starttime="20240206 13:29:38.381" endtime="20240206 13:29:38.381"/>
 </kw>
 <kw name="Login" library="Keywords">
 <arg>${credentials}[email]</arg>
@@ -95,73 +112,110 @@
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${environment}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240205 19:09:09.540" level="INFO">Opening url 'https://pre.bonp.me//member'</msg>
-<msg timestamp="20240205 19:09:09.555" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: Failed to decode response from marionette
-</msg>
-<msg timestamp="20240205 19:09:09.555" level="FAIL">InvalidSessionIdException: Message: WebDriver session does not exist, or is not active
+<msg timestamp="20240206 13:29:38.382" level="INFO">Opening url 'https://pre.bonp.me//member'</msg>
+<msg timestamp="20240206 13:29:38.394" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.140)
 Stacktrace:
-RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:191:5
-InvalidSessionIDError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:446:5
-assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:485:13
-assert.session@chrome://remote/content/shared/webdriver/Assert.sys.mjs:37:4
-despatch@chrome://remote/content/marionette/server.sys.mjs:315:19
-execute@chrome://remote/content/marionette/server.sys.mjs:289:16
-onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
-onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
-_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494:20
+	GetHandleVerifier [0x00291673+52979]
+	(No symbol) [0x00217961]
+	(No symbol) [0x000FDD3D]
+	(No symbol) [0x000E239A]
+	(No symbol) [0x0015A71B]
+	(No symbol) [0x0016ACB6]
+	(No symbol) [0x00154286]
+	(No symbol) [0x0012C063]
+	(No symbol) [0x0012CECD]
+	GetHandleVerifier [0x005A8D83+3294723]
+	GetHandleVerifier [0x005E6CC2+3548482]
+	GetHandleVerifier [0x005E1C9C+3527964]
+	GetHandleVerifier [0x0032870E+671630]
+	(No symbol) [0x00221EB4]
+	(No symbol) [0x0021D808]
+	(No symbol) [0x0021D92D]
+	(No symbol) [0x0020F7E0]
+	BaseThreadInitThunk [0x76F2FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x775F7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x775F7A4E+238]
+	(No symbol) [0x00000000]
 </msg>
-<status status="FAIL" starttime="20240205 19:09:09.540" endtime="20240205 19:09:09.557"/>
+<msg timestamp="20240206 13:29:38.395" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.140)
+Stacktrace:
+	GetHandleVerifier [0x00291673+52979]
+	(No symbol) [0x00217961]
+	(No symbol) [0x000FDD3D]
+	(No symbol) [0x000E239A]
+	(No symbol) [0x0015A71B]
+	(No symbol) [0x0016ACB6]
+	(No symbol) [0x00154286]
+	(No symbol) [0x0012C063]
+	(No symbol) [0x0012CECD]
+	GetHandleVerifier [0x005A8D83+3294723]
+	GetHandleVerifier [0x005E6CC2+3548482]
+	GetHandleVerifier [0x005E1C9C+3527964]
+	GetHandleVerifier [0x0032870E+671630]
+	(No symbol) [0x00221EB4]
+	(No symbol) [0x0021D808]
+	(No symbol) [0x0021D92D]
+	(No symbol) [0x0020F7E0]
+	BaseThreadInitThunk [0x76F2FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x775F7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x775F7A4E+238]
+	(No symbol) [0x00000000]
+</msg>
+<status status="FAIL" starttime="20240206 13:29:38.381" endtime="20240206 13:29:38.399"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
 <arg>${email_input}</arg>
-<status status="NOT RUN" starttime="20240205 19:09:09.557" endtime="20240205 19:09:09.557"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.400" endtime="20240206 13:29:38.400"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${email_input}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240205 19:09:09.557" endtime="20240205 19:09:09.558"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.400" endtime="20240206 13:29:38.401"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
 <arg>${pass_input}</arg>
-<status status="NOT RUN" starttime="20240205 19:09:09.558" endtime="20240205 19:09:09.558"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.401" endtime="20240206 13:29:38.403"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${pass_input}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240205 19:09:09.558" endtime="20240205 19:09:09.558"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.403" endtime="20240206 13:29:38.403"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
 <arg>${submit_button}</arg>
-<status status="NOT RUN" starttime="20240205 19:09:09.558" endtime="20240205 19:09:09.558"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.403" endtime="20240206 13:29:38.404"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${submit_button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240205 19:09:09.559" endtime="20240205 19:09:09.559"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.404" endtime="20240206 13:29:38.404"/>
 </kw>
-<status status="FAIL" starttime="20240205 19:09:09.539" endtime="20240205 19:09:09.559"/>
+<status status="FAIL" starttime="20240206 13:29:38.381" endtime="20240206 13:29:38.404"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
 <arg>${new_app_button}</arg>
-<status status="NOT RUN" starttime="20240205 19:09:09.559" endtime="20240205 19:09:09.559"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.404" endtime="20240206 13:29:38.404"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${new_app_button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240205 19:09:09.559" endtime="20240205 19:09:09.559"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.405" endtime="20240206 13:29:38.405"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
 <arg>${new_bot_name}</arg>
-<status status="NOT RUN" starttime="20240205 19:09:09.559" endtime="20240205 19:09:09.560"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.405" endtime="20240206 13:29:38.405"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${new_bot_name}</arg>
 <arg>${my_api10_bot_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240205 19:09:09.560" endtime="20240205 19:09:09.560"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.406" endtime="20240206 13:29:38.406"/>
 </kw>
 <for flavor="IN">
 <var>${value}</var>
@@ -173,76 +227,76 @@ _onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494
 <arg>Click Element</arg>
 <arg>//input[@value='${value}']</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" starttime="20240205 19:09:09.561" endtime="20240205 19:09:09.561"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.407" endtime="20240206 13:29:38.408"/>
 </kw>
-<status status="NOT RUN" starttime="20240205 19:09:09.560" endtime="20240205 19:09:09.561"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.406" endtime="20240206 13:29:38.408"/>
 </iter>
-<status status="NOT RUN" starttime="20240205 19:09:09.560" endtime="20240205 19:09:09.561"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.406" endtime="20240206 13:29:38.408"/>
 </for>
 <kw name="Select Radio Button" library="SeleniumLibrary">
 <arg>plan</arg>
 <arg>pro</arg>
 <doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<status status="NOT RUN" starttime="20240205 19:09:09.561" endtime="20240205 19:09:09.562"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.409" endtime="20240206 13:29:38.409"/>
 </kw>
 <kw name="Select Radio Button" library="SeleniumLibrary">
 <arg>apiver</arg>
 <arg>1</arg>
 <doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<status status="NOT RUN" starttime="20240205 19:09:09.562" endtime="20240205 19:09:09.562"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.409" endtime="20240206 13:29:38.409"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
 <arg>${company_name_input_field}</arg>
-<status status="NOT RUN" starttime="20240205 19:09:09.562" endtime="20240205 19:09:09.562"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.409" endtime="20240206 13:29:38.409"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${company_name_input_field}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240205 19:09:09.562" endtime="20240205 19:09:09.562"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.410" endtime="20240206 13:29:38.410"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20240205 19:09:09.562" endtime="20240205 19:09:09.563"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.410" endtime="20240206 13:29:38.410"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${company_name_input_field}</arg>
 <arg>${my_company_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240205 19:09:09.563" endtime="20240205 19:09:09.563"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.410" endtime="20240206 13:29:38.410"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20240205 19:09:09.563" endtime="20240205 19:09:09.563"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.410" endtime="20240206 13:29:38.410"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
 <arg>${company_name_option}</arg>
-<status status="NOT RUN" starttime="20240205 19:09:09.563" endtime="20240205 19:09:09.563"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.415" endtime="20240206 13:29:38.415"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${company_name_option}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240205 19:09:09.564" endtime="20240205 19:09:09.564"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.415" endtime="20240206 13:29:38.416"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
 <arg>${save_bot_settings}</arg>
-<status status="NOT RUN" starttime="20240205 19:09:09.564" endtime="20240205 19:09:09.564"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.416" endtime="20240206 13:29:38.416"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${save_bot_settings}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240205 19:09:09.564" endtime="20240205 19:09:09.564"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.416" endtime="20240206 13:29:38.416"/>
 </kw>
 <kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
 <arg>${loader_screen}</arg>
 <arg>timeout=30s</arg>
 <doc>Waits until the element ``locator`` disappears from the current page.</doc>
-<status status="NOT RUN" starttime="20240205 19:09:09.564" endtime="20240205 19:09:09.564"/>
+<status status="NOT RUN" starttime="20240206 13:29:38.416" endtime="20240206 13:29:38.417"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20240205 19:09:09.565" endtime="20240205 19:09:11.617"/>
+<status status="PASS" starttime="20240206 13:29:38.417" endtime="20240206 13:29:40.521"/>
 </kw>
 <doc>This test creates a BR V2 API1.0 bot under Evolany Co., Ltd. company</doc>
 <tag>API1.0</tag>
@@ -250,21 +304,34 @@ _onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494
 <tag>Regression</tag>
 <tag>Test1</tag>
 <tag>Test2</tag>
-<status status="FAIL" starttime="20240205 19:09:03.370" endtime="20240205 19:09:11.617">InvalidSessionIdException: Message: WebDriver session does not exist, or is not active
+<status status="FAIL" starttime="20240206 13:29:34.579" endtime="20240206 13:29:40.521">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.140)
 Stacktrace:
-RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:191:5
-InvalidSessionIDError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:446:5
-assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:485:13
-assert.session@chrome://remote/content/shared/webdriver/Assert.sys.mjs:37:4
-despatch@chrome://remote/content/marionette/server.sys.mjs:315:19
-execute@chrome://remote/content/marionette/server.sys.mjs:289:16
-onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
-onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
-_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494:20
+	GetHandleVerifier [0x00291673+52979]
+	(No symbol) [0x00217961]
+	(No symbol) [0x000FDD3D]
+	(No symbol) [0x000E239A]
+	(No symbol) [0x0015A71B]
+	(No symbol) [0x0016ACB6]
+	(No symbol) [0x00154286]
+	(No symbol) [0x0012C063]
+	(No symbol) [0x0012CECD]
+	GetHandleVerifier [0x005A8D83+3294723]
+	GetHandleVerifier [0x005E6CC2+3548482]
+	GetHandleVerifier [0x005E1C9C+3527964]
+	GetHandleVerifier [0x0032870E+671630]
+	(No symbol) [0x00221EB4]
+	(No symbol) [0x0021D808]
+	(No symbol) [0x0021D92D]
+	(No symbol) [0x0020F7E0]
+	BaseThreadInitThunk [0x76F2FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x775F7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x775F7A4E+238]
+	(No symbol) [0x00000000]
 </status>
 </test>
-<status status="FAIL" starttime="20240205 19:09:03.180" endtime="20240205 19:09:11.618"/>
+<status status="FAIL" starttime="20240206 13:29:34.337" endtime="20240206 13:29:40.522"/>
 </suite>
 <statistics>
 <total>
@@ -282,7 +349,31 @@ _onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20240205 19:09:09.555" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: Failed to decode response from marionette
+<msg timestamp="20240206 13:29:38.394" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.140)
+Stacktrace:
+	GetHandleVerifier [0x00291673+52979]
+	(No symbol) [0x00217961]
+	(No symbol) [0x000FDD3D]
+	(No symbol) [0x000E239A]
+	(No symbol) [0x0015A71B]
+	(No symbol) [0x0016ACB6]
+	(No symbol) [0x00154286]
+	(No symbol) [0x0012C063]
+	(No symbol) [0x0012CECD]
+	GetHandleVerifier [0x005A8D83+3294723]
+	GetHandleVerifier [0x005E6CC2+3548482]
+	GetHandleVerifier [0x005E1C9C+3527964]
+	GetHandleVerifier [0x0032870E+671630]
+	(No symbol) [0x00221EB4]
+	(No symbol) [0x0021D808]
+	(No symbol) [0x0021D92D]
+	(No symbol) [0x0020F7E0]
+	BaseThreadInitThunk [0x76F2FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x775F7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x775F7A4E+238]
+	(No symbol) [0x00000000]
 </msg>
 </errors>
 </robot>

@@ -12,7 +12,7 @@ create API1.0 bot
 
     [Documentation]    This test creates a BR V2 API1.0 bot under Evolany Co., Ltd. company
     [Tags]   NewAppPopup   API1.0   Regression   Test1   Test2
-    [Setup]    Setup Firefox Webdriver
+    [Setup]    Setup Chrome Webdriver and Access URL
                Login   ${credentials}[email]   ${credentials}[password]
     [Teardown]    Close Browser
 
@@ -50,7 +50,7 @@ create API2.0 bot
 
     [Documentation]    This test creates a BR V2 API2.0 bot under Evolany Co., Ltd. company
     [Tags]   NewAppPopup   API2.0   Regression
-    [Setup]    Setup Chrome Webdriver
+    [Setup]    Setup Chrome Webdriver and Access URL
                Login   ${credentials}[email]   ${credentials}[password]
     [Teardown]    Close Browser
 

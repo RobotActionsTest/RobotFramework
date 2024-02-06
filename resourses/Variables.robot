@@ -1,5 +1,5 @@
 *** Variables ***
-
+${url}   https://pre.bonp.me//member
 #Bot Names
 ${my_api10_bot_name}   test1
 ${my_api20_bot_name}   test2
