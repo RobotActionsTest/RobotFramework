@@ -78,3 +78,5 @@ create API2.0 bot
     Click Button    ${save_bot_settings}
     #Verification
     Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
+
+

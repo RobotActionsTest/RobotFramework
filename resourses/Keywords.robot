@@ -94,8 +94,8 @@ Select Option With Specified Text
 
 Type In And Press Enter
     [Arguments]   ${locator}   ${text}
-    Input Text    ${new_group_name}    ${text}
-    Press Keys    ${new_group_name}    ENTER
+    Input Text    ${locator}    ${text}
+    Press Keys    ${locator}    ENTER
 
 
 Clear, Type In And Press Enter
@@ -107,3 +107,30 @@ Clear, Type In And Press Enter
     END
     Input Text    ${new_item_name}    ${text}
     Press Keys    ${new_item_name}    ENTER
+
+Go To Chatflow Tab
+    Click Element    ${chatflow_tab}
+    Wait Until Element Is Visible and Enabled    ${add_new_group}
+
+Select group and chatflow item
+    [Arguments]   ${my_group_locator}   ${my_item_locator}
+    Click Element    ${my_group_locator}
+    Click Element    ${my_item_locator}
+
+Add Quick Reaction Button
+    [Arguments]   ${button_name}
+    Wait Until Element Is Visible and Enabled    ${my_new_rn_button}
+    Click Element    ${my_new_rn_button}
+    #Wait Until Keyword Succeeds    3x    2s    Click Element    ${my_new_rn_button}
+    Wait Until Element Is Visible    ${button_name_input_field}
+    Clear Element Text    ${button_name_input_field}
+    Input Text    ${button_name_input_field}    ${button_name}
+    Select Radio Button    trans_type    manual
+    Click Element    ${button_next_action}
+    Type In And Press Enter    ${button_next_action}   3:textitem3
+    Wait Until Element Is Visible    {advanced_settings_popup}
+    Click Element    {advanced_settings_popup}
+    Wait Until Element Is Visible    {user_key_input_field}
+    Clear Element Text    {user_key_input_field}
+    Input Text    {user_key_input_field}    choice
+    Click Button    ${save_button_settings}

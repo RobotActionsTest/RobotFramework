@@ -9,7 +9,7 @@ ${environment}   https://pre.bonp.me//member
 ${email_input}   //input[@name='email']
 ${pass_input}   //input[@name='pass']
 ${submit_button}   //button[@type='text']
-&{credentials}    email=alexandra@evolany.com    password=221373897221373897qW!
+&{credentials}    email=alexandra@evolany.com    password=221373897221373897qW!1
 #New APP popup
 ${new_app_button}   //button[text()[contains(.,'New App')]]
 ${new_bot_name}   //input[@name='name']
@@ -56,9 +56,13 @@ ${item_image}   //dd[@rt='image']
 ${item_video}   //dd[@rt='video']
 ${item_conditional}   //dd[@rt='logical']
 ${item_flex}   //dd[@rt='flex']
-${big_button_name_input_field}   //div[@class='form-type-text']/input[@name='label']
+${button_name_input_field}   //input[@name='label']
 ${save_button_settings}   //button[@class='icon save label']
-
+${my_new_rn_button}   (//label[@class='new'])[2]
+${button_next_action}   //input[@target_name='act']
+${advanced_settings_popup}   //label[@class='icon cog advanced-button']
+${user_key_input_field}   //input[@name='ukey']
+${text_handler_button}   (//span[@tp='ipts'])[3]
 #Broadcast
 ${users_tab}   //a[@name='user_list_view']
 ${broadcast_button}   //button[@id='btn_broadcast']
@@ -67,6 +71,8 @@ ${group1_br}   (//ul[@class='groups']/li)[4]
 @{group1_item_list}   //section[@class='actions']/ul/li
 ${textitem1_br}   //h5[normalize-space()='textitem1']
 ${textitem2_br}   //h5[normalize-space()='textitem2']
+${textitem3_br}   //h5[normalize-space()='textitem3']
+${textitem4_br}   //h5[normalize-space()='textitem4']
 ${carousel1_br}   //h5[normalize-space()='carousel1']
 ${carousel2_br}   //h5[normalize-space()='carousel2']
 ${image_carousel_br}   //h5[normalize-space()='image_carousel']
