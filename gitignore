@@ -3,3 +3,5 @@
 *.log
 *.html
 *.xml
+# Ignore log folder
+log/
