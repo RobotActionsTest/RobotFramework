@@ -115,7 +115,7 @@ Adding a 'Quick reaction' buttons to a text item (textitem2)
     ${my_ukey_value}   Set Variable   choice
 
     [Documentation]    This test adds 2 quick reaction buttons "choice1" and "choice2" to textitem2 in the "group1" chatflow.
-    [Tags]    AppTab    API1.0    Regression    Test1
+    [Tags]    AppTab    Regression    Test1
     [Setup]    Setup Chrome Webdriver and Access URL
                Login    ${credentials}[email]    ${credentials}[password]
                Open Specified Bot    ${bot_names_list}    ${my_api10_bot_name}
@@ -189,7 +189,7 @@ Adding a 'Quick reaction' buttons to a text item (textitem2)
 
 Adding a 'text handler' button to a text item (textitem3)
     [Documentation]    This test adds a "text handler" to textitem3 in the "group1" chatflow.
-    [Tags]    AppTab    API1.0    Regression    Test1
+    [Tags]    AppTab   Regression    Test1
     [Setup]    Setup Chrome Webdriver and Access URL
                Login    ${credentials}[email]    ${credentials}[password]
                Open Specified Bot    ${bot_names_list}    ${my_api10_bot_name}
