@@ -315,7 +315,7 @@ Adding a "big" button to a carousel item (carousel1)
 Setting Content data source for a carousel item (carousel2)
 
     [Documentation]    This test sets "Content" setting as "Events" for "carousel1" item in the "group1" chatflow.
-    [Tags]    AppTab   Regression    Test1
+    [Tags]    AppTab   Regression
     [Setup]    Setup Chrome Webdriver and Access URL
                Login    ${credentials}[email]    ${credentials}[password]
                Open Specified Bot    ${bot_names_list}    ${my_api10_bot_name}
@@ -344,7 +344,7 @@ Adding a 'Quick reaction' reaction to a carousel item (carousel2)
     ${my_button_name}   Set Variable   Next
 
     [Documentation]    This test adds a "Quick reaction" button to "carousel2" item in the "group1" chatflow.
-    [Tags]    AppTab   Regression    Test1
+    [Tags]    AppTab   Regression
     [Setup]    Setup Chrome Webdriver and Access URL
                Login    ${credentials}[email]    ${credentials}[password]
                Open Specified Bot    ${bot_names_list}    ${my_api10_bot_name}
@@ -370,7 +370,7 @@ Adding an image carousel item (image_carousel)
     ${my_item_name}    Set Variable    image_carousel
 
     [Documentation]    This test creates "image_carousel" item in the "group1" chatflow.
-    [Tags]    AppTab   Regression    Test1
+    [Tags]    AppTab   Regression
     [Setup]    Setup Chrome Webdriver and Access URL
                Login    ${credentials}[email]    ${credentials}[password]
                Open Specified Bot    ${bot_names_list}    ${my_api10_bot_name}
@@ -391,7 +391,7 @@ Setting a data source and adding a "big" button for an image carousel item
     ${my_button_name}   Set Variable   Next
 
     [Documentation]    This test sets "Content" setting as "Events" and adds a "big" button to "image_carousel" item in the "group1" chatflow.
-    [Tags]    AppTab   Regression    Test1
+    [Tags]    AppTab   Regression
     [Setup]    Setup Chrome Webdriver and Access URL
                Login    ${credentials}[email]    ${credentials}[password]
                Open Specified Bot    ${bot_names_list}    ${my_api10_bot_name}
