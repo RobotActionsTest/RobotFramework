@@ -5,6 +5,8 @@ Library    SeleniumLibrary
 Library    OperatingSystem
 Library    DateTime
 Library   driversync.py
+Library    Collections
+Library    BuiltIn
 
 *** Keywords ***
 
@@ -94,9 +96,9 @@ Select Option With Specified Text
 
 Type In And Press Enter
     [Arguments]   ${locator}   ${text}
+    Clear Element Text   ${locator}
     Input Text    ${locator}    ${text}
     Press Keys    ${locator}    ENTER
-
 
 Clear, Type In And Press Enter
     [Arguments]   ${locator}   ${text}
@@ -108,6 +110,28 @@ Clear, Type In And Press Enter
     Input Text    ${new_item_name}    ${text}
     Press Keys    ${new_item_name}    ENTER
 
+Click My Element
+    [Arguments]   ${my_element_locator}
+    Wait Until Element Is Visible and Enabled    ${my_element_locator}
+    Click Element    ${my_element_locator}
+
+Mouse Over My Element
+    [Arguments]   ${my_element_locator}
+    Wait Until Element Is Visible and Enabled    ${my_element_locator}
+    Mouse Over    ${my_element_locator}
+
+Add My Chatflow Item
+    [Arguments]   ${my_chatflow_locator}
+    Click My Element    ${my_chatflow_locator}
+    Press Keys    ${my_chatflow_locator}    ENTER
+
+Enter My Chatflow Item Name
+    [Arguments]   ${my_element_locator}  ${my_items_name}
+    Click My Element    ${my_element_locator}
+    Clear Element Text   ${my_element_locator}
+    Input Text    ${my_element_locator}    ${my_items_name}
+    Press Keys    ${my_element_locator}    ENTER
+
 Go To Chatflow Tab
     Click Element    ${chatflow_tab}
     Wait Until Element Is Visible and Enabled    ${add_new_group}
@@ -116,6 +140,28 @@ Select group and chatflow item
     [Arguments]   ${my_group_locator}   ${my_item_locator}
     Click Element    ${my_group_locator}
     Click Element    ${my_item_locator}
+
+Configure Button Name
+    [Arguments]   ${my_big_button_locator}   ${my_big_button_name}
+    Wait Until Element Is Visible and Enabled    ${my_big_button_locator}
+    Clear Element Text    ${my_big_button_locator}
+    Input Text    ${my_big_button_locator}    ${my_big_button_name}
+
+Check Element Attribute
+    [Arguments]    ${element}    ${attribute_name}    ${expected_value}
+    ${actual_value}    Get Element Attribute    ${element}    ${attribute_name}
+    Run Keyword If    '${actual_value}' == '${expected_value}'    Return From Keyword    ${TRUE}
+    Return From Keyword    ${FALSE}
+
+Select My Content Option
+    [Arguments]    ${my_content_options}    ${my_source}
+    ${content_source_options} =    Get WebElements    ${my_content_options}
+    FOR    ${content_source_option}    IN    @{content_source_options}
+        ${option_text} =    Get Text    ${content_source_option}
+        Run Keyword If    '${option_text}' == '${my_source}'   Click Element    ${content_source_option}
+        Sleep    1s
+        Exit For Loop
+    END
 
 Add Quick Reaction Button
     [Arguments]   ${button_name}
@@ -134,3 +180,4 @@ Add Quick Reaction Button
     Clear Element Text    {user_key_input_field}
     Input Text    {user_key_input_field}    choice
     Click Button    ${save_button_settings}
+

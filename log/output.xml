@@ -1,60 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.10 on win32)" generated="20240215 10:11:48.489" rpa="false" schemaversion="4">
-<suite id="s1" name="AddBots" source="C:\Users\Professional\PycharmProjects\RobotFramework\tests\AddBots.robot">
-<test id="s1-t1" name="create API2.0 bot" line="46">
+<robot generator="Robot 6.1.1 (Python 3.10.10 on win32)" generated="20240229 14:32:35.884" rpa="false" schemaversion="4">
+<suite id="s1" name="Group1" source="C:\Users\Professional\PycharmProjects\RobotFramework\tests\Group1.robot">
+<test id="s1-t1" name="Adding a video item" line="538">
 <kw name="Setup Chrome Webdriver and Access URL" library="Keywords" type="SETUP">
 <kw name="Get Chromedriver Path" library="driversync">
 <var>${chromedriver_path}</var>
-<msg timestamp="20240215 10:11:48.750" level="INFO">====== WebDriver manager ======</msg>
-<msg timestamp="20240215 10:11:49.356" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
-<msg timestamp="20240215 10:11:49.501" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
-<msg timestamp="20240215 10:11:49.624" level="INFO">Driver [C:\Users\Professional\.wdm\drivers\chromedriver\win64\121.0.6167.85\chromedriver-win32/chromedriver.exe] found in cache</msg>
-<msg timestamp="20240215 10:11:49.625" level="INFO">C:\Users\Professional\.wdm\drivers\chromedriver\win64\121.0.6167.85\chromedriver-win32/chromedriver.exe</msg>
-<msg timestamp="20240215 10:11:49.625" level="INFO">${chromedriver_path} = C:\Users\Professional\.wdm\drivers\chromedriver\win64\121.0.6167.85\chromedriver-win32/chromedriver.exe</msg>
-<status status="PASS" starttime="20240215 10:11:48.749" endtime="20240215 10:11:49.625"/>
+<msg timestamp="20240229 14:32:36.281" level="INFO">====== WebDriver manager ======</msg>
+<msg timestamp="20240229 14:32:36.958" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg timestamp="20240229 14:32:37.084" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg timestamp="20240229 14:32:37.203" level="INFO">Driver [C:\Users\Professional\.wdm\drivers\chromedriver\win64\122.0.6261.94\chromedriver-win32/chromedriver.exe] found in cache</msg>
+<msg timestamp="20240229 14:32:37.203" level="INFO">C:\Users\Professional\.wdm\drivers\chromedriver\win64\122.0.6261.94\chromedriver-win32/chromedriver.exe</msg>
+<msg timestamp="20240229 14:32:37.204" level="INFO">${chromedriver_path} = C:\Users\Professional\.wdm\drivers\chromedriver\win64\122.0.6261.94\chromedriver-win32/chromedriver.exe</msg>
+<status status="PASS" starttime="20240229 14:32:36.281" endtime="20240229 14:32:37.204"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240215 10:11:49.625" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001535C155750&gt;</msg>
-<status status="PASS" starttime="20240215 10:11:49.625" endtime="20240215 10:11:49.626"/>
+<msg timestamp="20240229 14:32:37.204" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000019E4B234340&gt;</msg>
+<status status="PASS" starttime="20240229 14:32:37.204" endtime="20240229 14:32:37.205"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-notifications</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240215 10:11:49.626" endtime="20240215 10:11:49.626"/>
+<status status="PASS" starttime="20240229 14:32:37.205" endtime="20240229 14:32:37.205"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-infobars</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240215 10:11:49.626" endtime="20240215 10:11:49.626"/>
+<status status="PASS" starttime="20240229 14:32:37.205" endtime="20240229 14:32:37.205"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-extensions</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240215 10:11:49.626" endtime="20240215 10:11:49.627"/>
+<status status="PASS" starttime="20240229 14:32:37.205" endtime="20240229 14:32:37.206"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--no-sandbox</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240215 10:11:49.627" endtime="20240215 10:11:49.627"/>
+<status status="PASS" starttime="20240229 14:32:37.206" endtime="20240229 14:32:37.206"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--start-maximized</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240215 10:11:49.627" endtime="20240215 10:11:49.627"/>
+<status status="PASS" starttime="20240229 14:32:37.206" endtime="20240229 14:32:37.206"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://pre.bonp.me//member</arg>
@@ -62,49 +62,22 @@
 <arg>options=${options}</arg>
 <arg>executable_path=${chromedriver_path}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240215 10:11:49.628" level="INFO">Opening browser 'chrome' to base url 'https://pre.bonp.me//member'.</msg>
-<status status="PASS" starttime="20240215 10:11:49.627" endtime="20240215 10:11:59.360"/>
+<msg timestamp="20240229 14:32:37.208" level="INFO">Opening browser 'chrome' to base url 'https://pre.bonp.me//member'.</msg>
+<status status="PASS" starttime="20240229 14:32:37.207" endtime="20240229 14:32:44.077"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>15s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20240215 10:11:59.361" endtime="20240215 10:11:59.362"/>
+<status status="PASS" starttime="20240229 14:32:44.077" endtime="20240229 14:32:44.079"/>
 </kw>
-<status status="PASS" starttime="20240215 10:11:48.749" endtime="20240215 10:11:59.362"/>
-</kw>
-<kw name="Create List" library="BuiltIn">
-<var>${checkbox_values}</var>
-<arg>crm</arg>
-<arg>events</arg>
-<arg>coupons</arg>
-<arg>catalog</arg>
-<arg>rms</arg>
-<arg>chat</arg>
-<arg>ec</arg>
-<arg>mail</arg>
-<arg>stores</arg>
-<arg>campaign</arg>
-<arg>elgana</arg>
-<arg>g_events</arg>
-<arg>bot_posts</arg>
-<arg>user_logs</arg>
-<arg>linepoints</arg>
-<arg>sfa_salesforce</arg>
-<arg>sfa_hubspot</arg>
-<arg>lp</arg>
-<arg>stamp_card</arg>
-<arg>ms365</arg>
-<arg>files</arg>
-<doc>Returns a list containing given items.</doc>
-<msg timestamp="20240215 10:11:59.363" level="INFO">${checkbox_values} = ['crm', 'events', 'coupons', 'catalog', 'rms', 'chat', 'ec', 'mail', 'stores', 'campaign', 'elgana', 'g_events', 'bot_posts', 'user_logs', 'linepoints', 'sfa_salesforce', 'sfa_hubspot', 'lp', 'stamp_c...</msg>
-<status status="PASS" starttime="20240215 10:11:59.362" endtime="20240215 10:11:59.363"/>
+<status status="PASS" starttime="20240229 14:32:36.280" endtime="20240229 14:32:44.079"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
-<var>${my_company_name}</var>
-<arg>Evolany Co., Ltd.</arg>
+<var>${my_item_name}</var>
+<arg>video1</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240215 10:11:59.364" level="INFO">${my_company_name} = Evolany Co., Ltd.</msg>
-<status status="PASS" starttime="20240215 10:11:59.363" endtime="20240215 10:11:59.364"/>
+<msg timestamp="20240229 14:32:44.079" level="INFO">${my_item_name} = video1</msg>
+<status status="PASS" starttime="20240229 14:32:44.079" endtime="20240229 14:32:44.079"/>
 </kw>
 <kw name="Login" library="Keywords">
 <arg>${credentials}[email]</arg>
@@ -112,8 +85,8 @@
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${environment}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240215 10:11:59.365" level="INFO">Opening url 'https://pre.bonp.me//member'</msg>
-<status status="PASS" starttime="20240215 10:11:59.364" endtime="20240215 10:11:59.905"/>
+<msg timestamp="20240229 14:32:44.080" level="INFO">Opening url 'https://pre.bonp.me//member'</msg>
+<status status="PASS" starttime="20240229 14:32:44.080" endtime="20240229 14:32:44.651"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
 <arg>${email_input}</arg>
@@ -121,22 +94,22 @@
 <arg>${locator}</arg>
 <arg>timeout=${timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240215 10:11:59.906" endtime="20240215 10:11:59.928"/>
+<status status="PASS" starttime="20240229 14:32:44.652" endtime="20240229 14:32:44.677"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <arg>timeout=${timeout}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240215 10:11:59.928" endtime="20240215 10:11:59.949"/>
+<status status="PASS" starttime="20240229 14:32:44.677" endtime="20240229 14:32:44.702"/>
 </kw>
-<status status="PASS" starttime="20240215 10:11:59.905" endtime="20240215 10:11:59.950"/>
+<status status="PASS" starttime="20240229 14:32:44.652" endtime="20240229 14:32:44.702"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${email_input}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240215 10:11:59.950" level="INFO">Typing text 'alexandra@evolany.com' into text field '//input[@name='email']'.</msg>
-<status status="PASS" starttime="20240215 10:11:59.950" endtime="20240215 10:12:00.036"/>
+<msg timestamp="20240229 14:32:44.703" level="INFO">Typing text 'alexandra@evolany.com' into text field '//input[@name='email']'.</msg>
+<status status="PASS" starttime="20240229 14:32:44.702" endtime="20240229 14:32:44.809"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
 <arg>${pass_input}</arg>
@@ -144,22 +117,22 @@
 <arg>${locator}</arg>
 <arg>timeout=${timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240215 10:12:00.037" endtime="20240215 10:12:00.059"/>
+<status status="PASS" starttime="20240229 14:32:44.810" endtime="20240229 14:32:44.834"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <arg>timeout=${timeout}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240215 10:12:00.059" endtime="20240215 10:12:00.080"/>
+<status status="PASS" starttime="20240229 14:32:44.835" endtime="20240229 14:32:44.858"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:00.037" endtime="20240215 10:12:00.080"/>
+<status status="PASS" starttime="20240229 14:32:44.809" endtime="20240229 14:32:44.858"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${pass_input}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:00.082" level="INFO">Typing text '221373897221373897qW!1' into text field '//input[@name='pass']'.</msg>
-<status status="PASS" starttime="20240215 10:12:00.081" endtime="20240215 10:12:00.153"/>
+<msg timestamp="20240229 14:32:44.859" level="INFO">Typing text '221373897221373897qW!1' into text field '//input[@name='pass']'.</msg>
+<status status="PASS" starttime="20240229 14:32:44.858" endtime="20240229 14:32:44.944"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
 <arg>${submit_button}</arg>
@@ -167,549 +140,760 @@
 <arg>${locator}</arg>
 <arg>timeout=${timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240215 10:12:00.154" endtime="20240215 10:12:00.173"/>
+<status status="PASS" starttime="20240229 14:32:44.945" endtime="20240229 14:32:44.963"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <arg>timeout=${timeout}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240215 10:12:00.173" endtime="20240215 10:12:00.190"/>
+<status status="PASS" starttime="20240229 14:32:44.963" endtime="20240229 14:32:44.983"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:00.153" endtime="20240215 10:12:00.191"/>
+<status status="PASS" starttime="20240229 14:32:44.945" endtime="20240229 14:32:44.983"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${submit_button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:00.191" level="INFO">Clicking button '//button[@type='text']'.</msg>
-<status status="PASS" starttime="20240215 10:12:00.191" endtime="20240215 10:12:00.233"/>
+<msg timestamp="20240229 14:32:44.984" level="INFO">Clicking button '//button[@type='text']'.</msg>
+<status status="PASS" starttime="20240229 14:32:44.983" endtime="20240229 14:32:45.032"/>
 </kw>
-<status status="PASS" starttime="20240215 10:11:59.364" endtime="20240215 10:12:00.233"/>
+<status status="PASS" starttime="20240229 14:32:44.080" endtime="20240229 14:32:45.032"/>
 </kw>
+<kw name="Open Specified Bot" library="Keywords">
+<arg>${bot_names_list}</arg>
+<arg>${my_api10_bot_name}</arg>
 <kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
-<arg>${new_app_button}</arg>
+<arg>${table_locator}</arg>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <arg>timeout=${timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240215 10:12:00.234" endtime="20240215 10:12:03.172"/>
+<status status="PASS" starttime="20240229 14:32:45.033" endtime="20240229 14:32:47.871"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <arg>timeout=${timeout}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240215 10:12:03.172" endtime="20240215 10:12:03.191"/>
+<status status="PASS" starttime="20240229 14:32:47.871" endtime="20240229 14:32:47.895"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:00.234" endtime="20240215 10:12:03.191"/>
+<status status="PASS" starttime="20240229 14:32:45.033" endtime="20240229 14:32:47.895"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${new_app_button}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:03.192" level="INFO">Clicking button '//button[text()[contains(.,'New App')]]'.</msg>
-<status status="PASS" starttime="20240215 10:12:03.192" endtime="20240215 10:12:03.264"/>
-</kw>
-<kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
-<arg>${new_bot_name}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240215 10:12:03.264" endtime="20240215 10:12:03.289"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240215 10:12:03.289" endtime="20240215 10:12:03.322"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:03.264" endtime="20240215 10:12:03.322"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${new_bot_name}</arg>
-<arg>${my_api20_bot_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:03.323" level="INFO">Typing text 'test2' into text field '//input[@name='name']'.</msg>
-<status status="PASS" starttime="20240215 10:12:03.323" endtime="20240215 10:12:03.411"/>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${table_elements}</var>
+<arg>${table_locator}//td</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20240229 14:32:48.215" level="INFO">${table_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="1686716eb48b6d4bdfede9b950fe47fa", element="f.9A6FE1B56D6E4B2FD2026A75AD6014EF.d.DB630D55BAB8C26E04F4C544762580ED.e.721")&gt;, &lt;selenium.webdri...</msg>
+<status status="PASS" starttime="20240229 14:32:47.896" endtime="20240229 14:32:48.215"/>
 </kw>
 <for flavor="IN">
-<var>${value}</var>
-<value>@{checkbox_values}</value>
+<var>${cell_element}</var>
+<value>@{table_elements}</value>
 <iter>
-<var name="${value}">crm</var>
+<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="1686716eb48b6d4bdfede9b950fe47fa", element="f.9A6FE1B56D6E4B2FD2026A75AD6014EF.d.DB630D55BAB8C26E04F4C544762580ED.e.721")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${cell_text}</var>
+<arg>${cell_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240229 14:32:48.228" level="INFO">${cell_text} = 1160</msg>
+<status status="PASS" starttime="20240229 14:32:48.216" endtime="20240229 14:32:48.228"/>
+</kw>
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
+<arg>'${target_text}' in '${cell_text}'</arg>
 <arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
+<arg>${cell_element}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:03.413" level="INFO">Clicking element '//input[@value='crm']'.</msg>
-<status status="PASS" starttime="20240215 10:12:03.412" endtime="20240215 10:12:03.524"/>
+<status status="PASS" starttime="20240229 14:32:48.228" endtime="20240229 14:32:48.229"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:03.411" endtime="20240215 10:12:03.524"/>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${target_text}' in '${cell_text}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20240229 14:32:48.229" endtime="20240229 14:32:48.229"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:03.411" endtime="20240215 10:12:03.524"/>
+<status status="PASS" starttime="20240229 14:32:48.215" endtime="20240229 14:32:48.229"/>
 </iter>
 <iter>
-<var name="${value}">events</var>
+<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="1686716eb48b6d4bdfede9b950fe47fa", element="f.9A6FE1B56D6E4B2FD2026A75AD6014EF.d.DB630D55BAB8C26E04F4C544762580ED.e.723")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${cell_text}</var>
+<arg>${cell_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240229 14:32:48.238" level="INFO">${cell_text} = test2</msg>
+<status status="PASS" starttime="20240229 14:32:48.230" endtime="20240229 14:32:48.238"/>
+</kw>
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
+<arg>'${target_text}' in '${cell_text}'</arg>
 <arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
+<arg>${cell_element}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:03.526" level="INFO">Clicking element '//input[@value='events']'.</msg>
-<status status="PASS" starttime="20240215 10:12:03.525" endtime="20240215 10:12:03.582"/>
+<status status="PASS" starttime="20240229 14:32:48.238" endtime="20240229 14:32:48.238"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:03.525" endtime="20240215 10:12:03.583"/>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${target_text}' in '${cell_text}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20240229 14:32:48.239" endtime="20240229 14:32:48.239"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:03.524" endtime="20240215 10:12:03.583"/>
+<status status="PASS" starttime="20240229 14:32:48.230" endtime="20240229 14:32:48.239"/>
 </iter>
 <iter>
-<var name="${value}">coupons</var>
+<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="1686716eb48b6d4bdfede9b950fe47fa", element="f.9A6FE1B56D6E4B2FD2026A75AD6014EF.d.DB630D55BAB8C26E04F4C544762580ED.e.725")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${cell_text}</var>
+<arg>${cell_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240229 14:32:48.247" level="INFO">${cell_text} = Alexandra</msg>
+<status status="PASS" starttime="20240229 14:32:48.239" endtime="20240229 14:32:48.247"/>
+</kw>
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
+<arg>'${target_text}' in '${cell_text}'</arg>
 <arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
+<arg>${cell_element}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:03.585" level="INFO">Clicking element '//input[@value='coupons']'.</msg>
-<status status="PASS" starttime="20240215 10:12:03.584" endtime="20240215 10:12:03.634"/>
+<status status="PASS" starttime="20240229 14:32:48.248" endtime="20240229 14:32:48.248"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:03.583" endtime="20240215 10:12:03.634"/>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${target_text}' in '${cell_text}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20240229 14:32:48.248" endtime="20240229 14:32:48.248"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:03.583" endtime="20240215 10:12:03.634"/>
+<status status="PASS" starttime="20240229 14:32:48.239" endtime="20240229 14:32:48.249"/>
 </iter>
 <iter>
-<var name="${value}">catalog</var>
+<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="1686716eb48b6d4bdfede9b950fe47fa", element="f.9A6FE1B56D6E4B2FD2026A75AD6014EF.d.DB630D55BAB8C26E04F4C544762580ED.e.727")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${cell_text}</var>
+<arg>${cell_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240229 14:32:48.257" level="INFO">${cell_text} = pro</msg>
+<status status="PASS" starttime="20240229 14:32:48.249" endtime="20240229 14:32:48.257"/>
+</kw>
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
+<arg>'${target_text}' in '${cell_text}'</arg>
 <arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
+<arg>${cell_element}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:03.636" level="INFO">Clicking element '//input[@value='catalog']'.</msg>
-<status status="PASS" starttime="20240215 10:12:03.635" endtime="20240215 10:12:03.684"/>
+<status status="PASS" starttime="20240229 14:32:48.257" endtime="20240229 14:32:48.257"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:03.635" endtime="20240215 10:12:03.684"/>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${target_text}' in '${cell_text}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20240229 14:32:48.258" endtime="20240229 14:32:48.258"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:03.635" endtime="20240215 10:12:03.684"/>
+<status status="PASS" starttime="20240229 14:32:48.249" endtime="20240229 14:32:48.258"/>
 </iter>
 <iter>
-<var name="${value}">rms</var>
+<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="1686716eb48b6d4bdfede9b950fe47fa", element="f.9A6FE1B56D6E4B2FD2026A75AD6014EF.d.DB630D55BAB8C26E04F4C544762580ED.e.729")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${cell_text}</var>
+<arg>${cell_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240229 14:32:48.266" level="INFO">${cell_text} = 0</msg>
+<status status="PASS" starttime="20240229 14:32:48.258" endtime="20240229 14:32:48.266"/>
+</kw>
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
+<arg>'${target_text}' in '${cell_text}'</arg>
 <arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
+<arg>${cell_element}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:03.685" level="INFO">Clicking element '//input[@value='rms']'.</msg>
-<status status="PASS" starttime="20240215 10:12:03.685" endtime="20240215 10:12:03.741"/>
+<status status="PASS" starttime="20240229 14:32:48.267" endtime="20240229 14:32:48.267"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:03.684" endtime="20240215 10:12:03.741"/>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${target_text}' in '${cell_text}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20240229 14:32:48.267" endtime="20240229 14:32:48.268"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:03.684" endtime="20240215 10:12:03.741"/>
+<status status="PASS" starttime="20240229 14:32:48.258" endtime="20240229 14:32:48.268"/>
 </iter>
 <iter>
-<var name="${value}">chat</var>
+<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="1686716eb48b6d4bdfede9b950fe47fa", element="f.9A6FE1B56D6E4B2FD2026A75AD6014EF.d.DB630D55BAB8C26E04F4C544762580ED.e.731")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${cell_text}</var>
+<arg>${cell_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240229 14:32:48.280" level="INFO">${cell_text} = Alexandra</msg>
+<status status="PASS" starttime="20240229 14:32:48.268" endtime="20240229 14:32:48.280"/>
+</kw>
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
+<arg>'${target_text}' in '${cell_text}'</arg>
 <arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
+<arg>${cell_element}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:03.743" level="INFO">Clicking element '//input[@value='chat']'.</msg>
-<status status="PASS" starttime="20240215 10:12:03.742" endtime="20240215 10:12:03.820"/>
+<status status="PASS" starttime="20240229 14:32:48.281" endtime="20240229 14:32:48.281"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:03.742" endtime="20240215 10:12:03.821"/>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${target_text}' in '${cell_text}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20240229 14:32:48.281" endtime="20240229 14:32:48.281"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:03.741" endtime="20240215 10:12:03.821"/>
+<status status="PASS" starttime="20240229 14:32:48.268" endtime="20240229 14:32:48.282"/>
 </iter>
 <iter>
-<var name="${value}">ec</var>
+<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="1686716eb48b6d4bdfede9b950fe47fa", element="f.9A6FE1B56D6E4B2FD2026A75AD6014EF.d.DB630D55BAB8C26E04F4C544762580ED.e.733")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${cell_text}</var>
+<arg>${cell_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240229 14:32:48.291" level="INFO">${cell_text} = 2024-02-15</msg>
+<status status="PASS" starttime="20240229 14:32:48.282" endtime="20240229 14:32:48.291"/>
+</kw>
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
+<arg>'${target_text}' in '${cell_text}'</arg>
 <arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
+<arg>${cell_element}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:03.822" level="INFO">Clicking element '//input[@value='ec']'.</msg>
-<status status="PASS" starttime="20240215 10:12:03.822" endtime="20240215 10:12:03.907"/>
+<status status="PASS" starttime="20240229 14:32:48.291" endtime="20240229 14:32:48.292"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:03.821" endtime="20240215 10:12:03.907"/>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${target_text}' in '${cell_text}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20240229 14:32:48.292" endtime="20240229 14:32:48.292"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:03.821" endtime="20240215 10:12:03.907"/>
+<status status="PASS" starttime="20240229 14:32:48.282" endtime="20240229 14:32:48.292"/>
 </iter>
 <iter>
-<var name="${value}">mail</var>
+<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="1686716eb48b6d4bdfede9b950fe47fa", element="f.9A6FE1B56D6E4B2FD2026A75AD6014EF.d.DB630D55BAB8C26E04F4C544762580ED.e.735")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${cell_text}</var>
+<arg>${cell_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240229 14:32:48.300" level="INFO">${cell_text} = 2024-02-15</msg>
+<status status="PASS" starttime="20240229 14:32:48.292" endtime="20240229 14:32:48.300"/>
+</kw>
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
+<arg>'${target_text}' in '${cell_text}'</arg>
 <arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
+<arg>${cell_element}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:03.909" level="INFO">Clicking element '//input[@value='mail']'.</msg>
-<status status="PASS" starttime="20240215 10:12:03.908" endtime="20240215 10:12:03.999"/>
+<status status="PASS" starttime="20240229 14:32:48.300" endtime="20240229 14:32:48.301"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:03.908" endtime="20240215 10:12:04.000"/>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${target_text}' in '${cell_text}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20240229 14:32:48.301" endtime="20240229 14:32:48.301"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:03.907" endtime="20240215 10:12:04.000"/>
+<status status="PASS" starttime="20240229 14:32:48.292" endtime="20240229 14:32:48.301"/>
 </iter>
 <iter>
-<var name="${value}">stores</var>
+<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="1686716eb48b6d4bdfede9b950fe47fa", element="f.9A6FE1B56D6E4B2FD2026A75AD6014EF.d.DB630D55BAB8C26E04F4C544762580ED.e.741")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${cell_text}</var>
+<arg>${cell_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240229 14:32:48.310" level="INFO">${cell_text} = </msg>
+<status status="PASS" starttime="20240229 14:32:48.302" endtime="20240229 14:32:48.310"/>
+</kw>
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
+<arg>'${target_text}' in '${cell_text}'</arg>
 <arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
+<arg>${cell_element}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:04.002" level="INFO">Clicking element '//input[@value='stores']'.</msg>
-<status status="PASS" starttime="20240215 10:12:04.001" endtime="20240215 10:12:04.058"/>
+<status status="PASS" starttime="20240229 14:32:48.310" endtime="20240229 14:32:48.311"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:04.001" endtime="20240215 10:12:04.059"/>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${target_text}' in '${cell_text}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20240229 14:32:48.311" endtime="20240229 14:32:48.311"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:04.001" endtime="20240215 10:12:04.059"/>
+<status status="PASS" starttime="20240229 14:32:48.302" endtime="20240229 14:32:48.311"/>
 </iter>
 <iter>
-<var name="${value}">campaign</var>
+<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="1686716eb48b6d4bdfede9b950fe47fa", element="f.9A6FE1B56D6E4B2FD2026A75AD6014EF.d.DB630D55BAB8C26E04F4C544762580ED.e.698")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${cell_text}</var>
+<arg>${cell_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240229 14:32:48.320" level="INFO">${cell_text} = 1159</msg>
+<status status="PASS" starttime="20240229 14:32:48.312" endtime="20240229 14:32:48.320"/>
+</kw>
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
+<arg>'${target_text}' in '${cell_text}'</arg>
 <arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
+<arg>${cell_element}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:04.061" level="INFO">Clicking element '//input[@value='campaign']'.</msg>
-<status status="PASS" starttime="20240215 10:12:04.060" endtime="20240215 10:12:04.120"/>
+<status status="PASS" starttime="20240229 14:32:48.320" endtime="20240229 14:32:48.321"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:04.059" endtime="20240215 10:12:04.120"/>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${target_text}' in '${cell_text}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20240229 14:32:48.321" endtime="20240229 14:32:48.321"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:04.059" endtime="20240215 10:12:04.121"/>
+<status status="PASS" starttime="20240229 14:32:48.311" endtime="20240229 14:32:48.321"/>
 </iter>
 <iter>
-<var name="${value}">elgana</var>
+<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="1686716eb48b6d4bdfede9b950fe47fa", element="f.9A6FE1B56D6E4B2FD2026A75AD6014EF.d.DB630D55BAB8C26E04F4C544762580ED.e.700")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${cell_text}</var>
+<arg>${cell_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240229 14:32:48.330" level="INFO">${cell_text} = test1</msg>
+<status status="PASS" starttime="20240229 14:32:48.322" endtime="20240229 14:32:48.330"/>
+</kw>
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
+<arg>'${target_text}' in '${cell_text}'</arg>
 <arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
+<arg>${cell_element}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
+<arg>${cell_element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:04.122" level="INFO">Clicking element '//input[@value='elgana']'.</msg>
-<status status="PASS" starttime="20240215 10:12:04.122" endtime="20240215 10:12:04.172"/>
+<msg timestamp="20240229 14:32:48.331" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="1686716eb48b6d4bdfede9b950fe47fa", element="f.9A6FE1B56D6E4B2FD2026A75AD6014EF.d.DB630D55BAB8C26E04F4C544762580ED.e.700")&gt;'.</msg>
+<status status="PASS" starttime="20240229 14:32:48.331" endtime="20240229 14:32:48.368"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:04.121" endtime="20240215 10:12:04.172"/>
+<status status="PASS" starttime="20240229 14:32:48.330" endtime="20240229 14:32:48.369"/>
 </kw>
-<status status="PASS" starttime="20240215 10:12:04.121" endtime="20240215 10:12:04.173"/>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${target_text}' in '${cell_text}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<msg timestamp="20240229 14:32:48.370" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20240229 14:32:48.369" endtime="20240229 14:32:48.370"/>
+</kw>
+<status status="PASS" starttime="20240229 14:32:48.322" endtime="20240229 14:32:48.370"/>
 </iter>
-<iter>
-<var name="${value}">g_events</var>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
-<arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:04.174" level="INFO">Clicking element '//input[@value='g_events']'.</msg>
-<status status="PASS" starttime="20240215 10:12:04.174" endtime="20240215 10:12:04.217"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.173" endtime="20240215 10:12:04.217"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.173" endtime="20240215 10:12:04.217"/>
-</iter>
-<iter>
-<var name="${value}">bot_posts</var>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
-<arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:04.219" level="INFO">Clicking element '//input[@value='bot_posts']'.</msg>
-<status status="PASS" starttime="20240215 10:12:04.218" endtime="20240215 10:12:04.267"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.218" endtime="20240215 10:12:04.267"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.218" endtime="20240215 10:12:04.267"/>
-</iter>
-<iter>
-<var name="${value}">user_logs</var>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
-<arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:04.269" level="INFO">Clicking element '//input[@value='user_logs']'.</msg>
-<status status="PASS" starttime="20240215 10:12:04.269" endtime="20240215 10:12:04.323"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.268" endtime="20240215 10:12:04.323"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.267" endtime="20240215 10:12:04.323"/>
-</iter>
-<iter>
-<var name="${value}">linepoints</var>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
-<arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:04.325" level="INFO">Clicking element '//input[@value='linepoints']'.</msg>
-<status status="PASS" starttime="20240215 10:12:04.324" endtime="20240215 10:12:04.388"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.324" endtime="20240215 10:12:04.389"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.323" endtime="20240215 10:12:04.389"/>
-</iter>
-<iter>
-<var name="${value}">sfa_salesforce</var>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
-<arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:04.391" level="INFO">Clicking element '//input[@value='sfa_salesforce']'.</msg>
-<status status="PASS" starttime="20240215 10:12:04.390" endtime="20240215 10:12:04.446"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.389" endtime="20240215 10:12:04.446"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.389" endtime="20240215 10:12:04.447"/>
-</iter>
-<iter>
-<var name="${value}">sfa_hubspot</var>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
-<arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:04.448" level="INFO">Clicking element '//input[@value='sfa_hubspot']'.</msg>
-<status status="PASS" starttime="20240215 10:12:04.447" endtime="20240215 10:12:04.507"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.447" endtime="20240215 10:12:04.507"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.447" endtime="20240215 10:12:04.508"/>
-</iter>
-<iter>
-<var name="${value}">lp</var>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
-<arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:04.510" level="INFO">Clicking element '//input[@value='lp']'.</msg>
-<status status="PASS" starttime="20240215 10:12:04.509" endtime="20240215 10:12:04.558"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.508" endtime="20240215 10:12:04.558"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.508" endtime="20240215 10:12:04.559"/>
-</iter>
-<iter>
-<var name="${value}">stamp_card</var>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
-<arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:04.560" level="INFO">Clicking element '//input[@value='stamp_card']'.</msg>
-<status status="PASS" starttime="20240215 10:12:04.559" endtime="20240215 10:12:04.615"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.559" endtime="20240215 10:12:04.615"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.559" endtime="20240215 10:12:04.615"/>
-</iter>
-<iter>
-<var name="${value}">ms365</var>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
-<arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:04.617" level="INFO">Clicking element '//input[@value='ms365']'.</msg>
-<status status="PASS" starttime="20240215 10:12:04.616" endtime="20240215 10:12:04.680"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.616" endtime="20240215 10:12:04.680"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.615" endtime="20240215 10:12:04.680"/>
-</iter>
-<iter>
-<var name="${value}">files</var>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${value}' != 'chatgpt'</arg>
-<arg>Click Element</arg>
-<arg>//input[@value='${value}']</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='${value}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:04.681" level="INFO">Clicking element '//input[@value='files']'.</msg>
-<status status="PASS" starttime="20240215 10:12:04.681" endtime="20240215 10:12:04.734"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.680" endtime="20240215 10:12:04.734"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.680" endtime="20240215 10:12:04.734"/>
-</iter>
-<status status="PASS" starttime="20240215 10:12:03.411" endtime="20240215 10:12:04.734"/>
+<status status="PASS" starttime="20240229 14:32:48.215" endtime="20240229 14:32:48.370"/>
 </for>
-<kw name="Select Radio Button" library="SeleniumLibrary">
-<arg>plan</arg>
-<arg>pro</arg>
-<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<msg timestamp="20240215 10:12:04.735" level="INFO">Selecting 'pro' from radio button 'plan'.</msg>
-<status status="PASS" starttime="20240215 10:12:04.734" endtime="20240215 10:12:04.818"/>
-</kw>
-<kw name="Select Radio Button" library="SeleniumLibrary">
-<arg>apiver</arg>
-<arg>2</arg>
-<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<msg timestamp="20240215 10:12:04.819" level="INFO">Selecting '2' from radio button 'apiver'.</msg>
-<status status="PASS" starttime="20240215 10:12:04.818" endtime="20240215 10:12:04.839"/>
-</kw>
-<kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
-<arg>${company_name_input_field}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240215 10:12:04.840" endtime="20240215 10:12:04.862"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240215 10:12:04.862" endtime="20240215 10:12:04.893"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:04.839" endtime="20240215 10:12:04.894"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${company_name_input_field}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:04.895" level="INFO">Clicking element '//input[@target_name='com_id']'.</msg>
-<status status="PASS" starttime="20240215 10:12:04.894" endtime="20240215 10:12:04.996"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${company_name_input_field}</arg>
-<arg>${my_company_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:04.997" level="INFO">Typing text 'Evolany Co., Ltd.' into text field '//input[@target_name='com_id']'.</msg>
-<status status="PASS" starttime="20240215 10:12:04.996" endtime="20240215 10:12:05.306"/>
-</kw>
-<kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
-<arg>${company_name_option}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240215 10:12:05.307" endtime="20240215 10:12:05.324"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240215 10:12:05.324" endtime="20240215 10:12:05.342"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:05.306" endtime="20240215 10:12:05.342"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${company_name_option}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:05.343" level="INFO">Clicking element '(//ul[@id='form-item-autocomplete']/li)[1]'.</msg>
-<status status="PASS" starttime="20240215 10:12:05.342" endtime="20240215 10:12:05.381"/>
-</kw>
-<kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
-<arg>${save_bot_settings}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240215 10:12:05.382" endtime="20240215 10:12:05.406"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240215 10:12:05.406" endtime="20240215 10:12:05.428"/>
-</kw>
-<status status="PASS" starttime="20240215 10:12:05.382" endtime="20240215 10:12:05.428"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${save_bot_settings}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240215 10:12:05.429" level="INFO">Clicking button '//button[@class='icon save']'.</msg>
-<status status="PASS" starttime="20240215 10:12:05.428" endtime="20240215 10:12:05.486"/>
-</kw>
 <kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
 <arg>${loader_screen}</arg>
 <arg>timeout=30s</arg>
 <doc>Waits until the element ``locator`` disappears from the current page.</doc>
-<status status="PASS" starttime="20240215 10:12:05.486" endtime="20240215 10:12:42.290"/>
+<status status="PASS" starttime="20240229 14:32:48.370" endtime="20240229 14:33:06.043"/>
+</kw>
+<status status="PASS" starttime="20240229 14:32:45.032" endtime="20240229 14:33:06.043"/>
+</kw>
+<kw name="Go To Chatflow Tab" library="Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${chatflow_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240229 14:33:06.044" level="INFO">Clicking element '//dd[@name='navi-flow']'.</msg>
+<status status="PASS" starttime="20240229 14:33:06.044" endtime="20240229 14:33:06.098"/>
+</kw>
+<kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
+<arg>${add_new_group}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 14:33:06.098" endtime="20240229 14:33:06.119"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240229 14:33:06.119" endtime="20240229 14:33:06.139"/>
+</kw>
+<status status="PASS" starttime="20240229 14:33:06.098" endtime="20240229 14:33:06.140"/>
+</kw>
+<status status="PASS" starttime="20240229 14:33:06.044" endtime="20240229 14:33:06.140"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${group1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240229 14:33:06.141" level="INFO">Clicking element '//h5[normalize-space()='group1']'.</msg>
+<status status="PASS" starttime="20240229 14:33:06.140" endtime="20240229 14:33:06.618"/>
+</kw>
+<kw name="Mouse Over My Element" library="Keywords">
+<arg>${add_new_item}</arg>
+<kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
+<arg>${my_element_locator}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 14:33:06.619" endtime="20240229 14:33:06.892"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240229 14:33:06.892" endtime="20240229 14:33:06.914"/>
+</kw>
+<status status="PASS" starttime="20240229 14:33:06.618" endtime="20240229 14:33:06.914"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${my_element_locator}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240229 14:33:06.915" level="INFO">Simulating Mouse Over on element '(//button[@class='icon plus-square'])[2]'.</msg>
+<status status="PASS" starttime="20240229 14:33:06.914" endtime="20240229 14:33:07.215"/>
+</kw>
+<status status="PASS" starttime="20240229 14:33:06.618" endtime="20240229 14:33:07.215"/>
+</kw>
+<kw name="Add My Chatflow Item" library="Keywords">
+<arg>${item_video}</arg>
+<kw name="Click My Element" library="Keywords">
+<arg>${my_chatflow_locator}</arg>
+<kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
+<arg>${my_element_locator}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 14:33:07.217" endtime="20240229 14:33:07.234"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240229 14:33:07.235" endtime="20240229 14:33:07.253"/>
+</kw>
+<status status="PASS" starttime="20240229 14:33:07.216" endtime="20240229 14:33:07.253"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${my_element_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240229 14:33:07.254" level="INFO">Clicking element '//dd[@rt='video']'.</msg>
+<status status="PASS" starttime="20240229 14:33:07.254" endtime="20240229 14:33:07.299"/>
+</kw>
+<status status="PASS" starttime="20240229 14:33:07.216" endtime="20240229 14:33:07.299"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${my_chatflow_locator}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240229 14:33:07.300" level="INFO">Sending key(s) ('ENTER',) to //dd[@rt='video'] element.</msg>
+<msg timestamp="20240229 14:33:07.641" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20240229 14:33:07.641" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20240229 14:33:07.299" endtime="20240229 14:33:07.654"/>
+</kw>
+<status status="PASS" starttime="20240229 14:33:07.216" endtime="20240229 14:33:07.654"/>
+</kw>
+<kw name="Enter My Chatflow Item Name" library="Keywords">
+<arg>${video_name}</arg>
+<arg>${my_item_name}</arg>
+<kw name="Click My Element" library="Keywords">
+<arg>${my_element_locator}</arg>
+<kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
+<arg>${my_element_locator}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 14:33:07.656" endtime="20240229 14:33:08.508"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240229 14:33:08.508" endtime="20240229 14:33:08.534"/>
+</kw>
+<status status="PASS" starttime="20240229 14:33:07.655" endtime="20240229 14:33:08.534"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${my_element_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240229 14:33:08.535" level="INFO">Clicking element '//input[@data-value='Video']'.</msg>
+<status status="PASS" starttime="20240229 14:33:08.534" endtime="20240229 14:33:08.616"/>
+</kw>
+<status status="PASS" starttime="20240229 14:33:07.655" endtime="20240229 14:33:08.616"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${my_element_locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20240229 14:33:08.617" endtime="20240229 14:33:08.673"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${my_element_locator}</arg>
+<arg>${my_items_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240229 14:33:08.674" level="INFO">Typing text 'video1' into text field '//input[@data-value='Video']'.</msg>
+<status status="PASS" starttime="20240229 14:33:08.674" endtime="20240229 14:33:08.763"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${my_element_locator}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240229 14:33:08.765" level="INFO">Sending key(s) ('ENTER',) to //input[@data-value='Video'] element.</msg>
+<msg timestamp="20240229 14:33:09.054" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20240229 14:33:09.055" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20240229 14:33:08.764" endtime="20240229 14:33:09.062"/>
+</kw>
+<status status="PASS" starttime="20240229 14:33:07.654" endtime="20240229 14:33:09.062"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20240215 10:12:42.290" endtime="20240215 10:12:45.977"/>
+<status status="PASS" starttime="20240229 14:33:09.062" endtime="20240229 14:33:11.333"/>
 </kw>
-<doc>This test creates a BR V2 API2.0 bot under Evolany Co., Ltd. company</doc>
-<tag>API2.0</tag>
-<tag>NewAppPopup</tag>
+<doc>This test creates "video1" item in the "group1" chatflow.</doc>
+<tag>AppTab</tag>
 <tag>Regression</tag>
-<status status="PASS" starttime="20240215 10:11:48.748" endtime="20240215 10:12:45.977"/>
+<tag>Test1</tag>
+<status status="PASS" starttime="20240229 14:32:36.279" endtime="20240229 14:33:11.333"/>
 </test>
-<status status="PASS" starttime="20240215 10:11:48.491" endtime="20240215 10:12:45.978"/>
+<status status="PASS" starttime="20240229 14:32:35.886" endtime="20240229 14:33:11.334"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">API2.0</stat>
-<stat pass="1" fail="0" skip="0">NewAppPopup</stat>
+<stat pass="1" fail="0" skip="0">AppTab</stat>
 <stat pass="1" fail="0" skip="0">Regression</stat>
+<stat pass="1" fail="0" skip="0">Test1</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="AddBots">AddBots</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Group1">Group1</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20240229 14:32:36.207" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 3: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.209" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 4: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.209" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 5: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.209" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 6: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.210" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 7: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.210" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 8: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.210" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 9: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.210" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 10: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.210" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 11: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.210" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 12: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.211" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 13: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.211" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 14: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.211" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 15: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.211" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 16: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.212" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 17: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.212" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 18: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.212" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 19: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.213" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 20: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.213" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 21: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.213" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 22: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.213" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 23: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.214" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 24: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.214" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 25: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.214" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 26: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.215" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 27: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.215" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 28: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.215" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 29: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.215" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 30: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.215" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 31: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.216" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 32: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.216" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 33: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.216" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 34: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.216" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 35: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.217" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 36: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.217" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 37: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.217" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 38: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.217" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 39: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.218" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 40: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.218" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 41: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.218" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 42: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.218" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 43: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.219" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 44: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.219" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 45: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.219" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 46: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.220" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 47: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.220" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 48: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.220" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 49: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.221" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 50: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.221" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 51: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.221" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 52: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.221" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 53: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.222" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 54: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.222" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 55: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.222" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 56: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.223" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 57: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.223" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 58: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.223" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 59: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.223" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 60: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.223" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 61: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.224" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 62: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.224" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 63: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.224" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 64: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.224" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 65: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.225" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 66: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.225" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 67: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.226" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 68: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.226" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 69: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.226" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 70: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.226" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 71: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.226" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 72: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.227" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 73: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.227" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 74: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.227" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 75: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.227" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 76: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.228" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 77: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.228" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 78: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.228" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 79: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.228" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 80: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.229" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 81: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.229" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 82: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.229" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 83: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.230" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 84: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.230" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 85: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.230" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 86: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.230" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 87: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.230" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 88: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.231" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 89: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.231" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 90: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.231" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 91: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.232" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 92: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.232" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 93: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.232" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 94: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.232" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 95: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.233" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 96: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.233" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 97: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.233" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 98: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.233" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 99: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.233" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 100: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.233" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 101: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.234" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 102: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.234" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 103: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.234" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 104: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.235" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 105: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.235" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 106: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.235" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 107: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.235" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 108: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.235" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 109: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.236" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 110: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.236" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 111: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.236" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 112: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.237" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 113: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.237" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 114: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.237" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 115: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.237" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 116: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.238" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 117: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.238" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 118: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.238" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 119: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.239" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 120: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.239" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 121: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.239" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 122: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.239" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 123: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.239" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 124: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.240" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 125: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.240" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 126: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.240" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 127: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.240" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 128: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.241" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 129: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.241" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 130: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.241" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 131: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.242" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 132: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.242" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 133: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.242" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 134: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.243" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 135: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.243" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 136: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.243" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 137: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.244" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 138: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.244" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 139: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.244" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 140: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.244" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 141: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.245" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 142: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.245" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 143: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.245" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 144: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.245" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 145: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.246" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 146: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.246" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 147: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.246" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 148: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.246" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 149: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.247" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 150: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.247" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 151: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.247" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 152: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.247" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 153: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.248" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 154: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.248" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 155: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.248" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 156: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.248" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 157: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.249" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 158: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.249" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 159: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.249" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 160: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.249" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 161: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.250" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 162: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.250" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 163: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.250" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 164: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.250" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 165: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.251" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 166: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.251" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 167: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.251" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 168: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.251" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 169: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.251" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 170: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.252" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 171: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.252" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 172: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.252" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 173: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.253" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 174: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.253" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 175: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.253" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 176: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.253" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 177: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.254" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 178: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.254" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 179: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.254" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 180: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.254" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 181: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.254" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 182: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.255" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 183: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.255" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 184: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.255" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 185: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.256" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 186: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.256" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 187: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.256" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 188: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.256" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 189: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.257" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 190: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.257" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 191: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.257" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 192: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.257" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 193: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.258" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 194: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.258" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 195: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.258" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 196: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.258" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 197: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.259" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 198: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.259" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 199: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.259" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 200: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.259" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 201: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.260" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 202: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.260" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 203: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.260" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 204: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.260" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 205: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.261" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 206: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.261" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 207: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.261" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 208: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.261" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 209: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.262" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 210: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.262" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 211: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.262" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 212: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.262" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 213: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.263" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 214: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.263" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 215: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.263" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 216: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.263" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 217: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.264" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 218: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.264" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 219: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.264" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 220: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.264" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 221: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.265" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 222: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.265" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 223: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.265" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 224: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.266" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 225: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.266" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 226: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.266" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 227: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.267" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 228: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.267" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 229: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.267" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 230: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.267" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 231: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.267" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 232: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.268" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 233: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.268" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 234: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.268" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 235: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.268" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 236: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.269" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 237: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.269" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 238: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.270" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 239: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.270" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 240: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.270" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 241: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.270" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 242: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.270" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 243: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.271" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 244: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.271" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 245: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.271" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 246: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.271" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 247: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.272" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 248: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.272" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 249: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.272" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 250: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.272" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 251: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.273" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 252: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.273" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 253: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.273" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 254: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.273" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 255: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.274" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 256: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.274" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 257: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.274" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 258: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.274" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 259: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.275" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 260: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.275" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 261: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.275" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 262: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.275" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 263: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.276" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 264: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.276" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 265: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20240229 14:32:36.276" level="ERROR">Error in file 'C:\Users\Professional\PycharmProjects\RobotFramework\uploaddata\flex_variable.robot' on line 266: Setting variable '}' failed: Invalid variable name '}'.</msg>
 </errors>
 </robot>

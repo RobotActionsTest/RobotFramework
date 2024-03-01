@@ -40,7 +40,7 @@ create API1.0 bot
     #save new bot
     Wait Until Element Is Visible and Enabled   ${save_bot_settings}
     Click Button    ${save_bot_settings}
-    #Verification
+    #Verification?
     Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
 
 create API2.0 bot
@@ -76,7 +76,7 @@ create API2.0 bot
     #save new bot
     Wait Until Element Is Visible and Enabled   ${save_bot_settings}
     Click Button    ${save_bot_settings}
-    #Verification
+    #Verification?
     Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
 
 
