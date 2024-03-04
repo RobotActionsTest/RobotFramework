@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       selected-api:
-        description: 'Select Bot API'
+        description: 'Select API version'
         required: true
         default: 'API1.0'
 
