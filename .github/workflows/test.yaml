@@ -29,16 +29,16 @@ jobs:
 
       - name: Run Tests
         run: |
-          if ($env:selected-bot -eq "API1.0") {
+          if (${env:selected-bot} -eq "API1.0") {
             Write-Host "Running tests for API 1.0"
             python -m robot --outputdir reports -x junit-report.xml --include Test1 tests/Group1.robot
           }
-          elseif ($env:selected-bot -eq "API2.0") {
+          elseif (${env:selected-bot} -eq "API2.0") {
             Write-Host "Running tests for API 2.0"
             python -m robot --outputdir reports -x junit-report.xml --include Test1 tests/Group1.robot
           }
           else {
-            Write-Host "Invalid API selection: $env:selected-bot"
+            Write-Host "Invalid API selection: ${env:selected-bot}"
             exit 1
           }
 
