@@ -34,26 +34,22 @@ jobs:
 
       - name: Run Tests
         run: |
-          if (${env:selected-api} -eq "API1.0") {
+          if ($selected-api -eq "API1.0") {
             Write-Host "Running tests for API1.0"
             python -m robot --outputdir reports -x junit-report.xml --include Test1 tests/Group1.robot
           }
-          elseif (${env:selected-api} -eq "API2.0") {
+          elseif ($selected-api -eq "API2.0") {
             Write-Host "Running tests for API2.0"
             python -m robot --outputdir reports -x junit-report.xml --include Test2 tests/Group1.robot
           }
           else {
-            Write-Host "Invalid API selection: ${env:selected-api}"
+            Write-Host "Invalid API selection: $selected-api"
             exit 1
           }
-
-      - name: Debug API Value
-        run: |
-          echo "Selected API: $selected-api"
-        shell: bash
 
       - name: Publish test results
         uses: actions/upload-artifact@v2
         with:
           name: robot-test-results
           path: reports
+
