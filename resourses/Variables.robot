@@ -45,6 +45,7 @@ ${add_new_group}   (//button[@class='icon plus-square'])[1]
 ${new_group}   //dd[@class='new-group']
 ${new_group_name}   //li[@class='group_0 editing on']//input[@type='text']
 ${group1}   //h5[normalize-space()='group1']
+${booking}   //h5[normalize-space()='booking']
 ${add_new_item}   (//button[@class='icon plus-square'])[2]
 ${item_text}   //dd[@rt='text']
 ${item_text_textarea}   (//textarea[@class='msg with-emoticon'])[1]
@@ -109,6 +110,39 @@ ${send_broadcast}   //button[@class='icon send label']
 ${success_sending_message}    //div[@class='content']/p
 ${close_popup_icon}   (//i[@class='icon close'])[2]
 
+#Booking & MiniApps
+${booking}   //h5[normalize-space()='booking']
+${booking_trigger}   //h5[normalize-space()='booking_trigger']
+${booking_trigger_button}   (//li[@tp='items'])[1]
+${miniapp_transition_option}   //span[@tp='app']
+${transition_option_input}    //input[@target_name='viewid']
+${booking_confirm}   //h5[normalize-space()='booking_confirm']
+${booking_reminder}   //h5[normalize-space()='booking_reminder']
+${booking_follow_up}   //h5[normalize-space()='booking_follow_up']
+${miniapp_tab}   //dd[@name='navi-miniapp']
+${add_new_miniapp}   //nav[@class='navi view-navi']/div/button
+${add_new_view}   //dd[@act='group']
+${rms_seats_title}   //input[@name='title']
+${default_section_locator}   (//section[@class='comp-mask'])[2]
+${delete_icon}   (//i[@class='ico trash'])[2]
+${calendar1_title}  (//input[@name='title'])[3]
+${miniapp_list}   //ul/li/h5
+${add_new_miniapp_component}   (//div[@class='bar'])[1]
+${miniapp_component_list}   (//dd[@tp='formitems'])[1]
+${miniapp_component_options}   (//dl[@class='sub formitems'])[1]/dd
+${dropdown_option}   (//dd[@tp='dropdown'])[1]
+${form_option_title}   //input[@name='title']
+${form_option_options}   //textarea[@name='options']
+${form_option_ukey}   (//input[@name='name'])[2]
+${save_icon}   (//i[@class='ico save'])[2]
+${outer_buttons_settings}   (//section[@class='comp-mask'])[3]
+${inner_buttons_settings}   //button[@name='button-0']
+${transiotion_input}   //input[@target_name='view']
+${save_transition_icon}   (//i[@class='ico save'])[3]
+${calendar_settings}   //section[@class='comp-mask']
+${calendar_ukey}   //input[@name='name']
+${calendar_chat_transition_input}   //input[@target_name='chat']
+${calendar_save_icon}   //i[@class='ico save']
 
 
 

@@ -7,6 +7,7 @@ Library    DateTime
 Library   driversync.py
 Library    Collections
 Library    BuiltIn
+Library    XML
 
 *** Keywords ***
 
@@ -112,12 +113,12 @@ Clear, Type In And Press Enter
 
 Click My Element
     [Arguments]   ${my_element_locator}
-    Wait Until Element Is Visible and Enabled    ${my_element_locator}
+    Wait Until Element Is Visible    ${my_element_locator}
     Click Element    ${my_element_locator}
 
 Mouse Over My Element
     [Arguments]   ${my_element_locator}
-    Wait Until Element Is Visible and Enabled    ${my_element_locator}
+    Wait Until Element Is Visible    ${my_element_locator}
     Mouse Over    ${my_element_locator}
 
 Add My Chatflow Item
@@ -180,4 +181,146 @@ Add Quick Reaction Button
     Clear Element Text    {user_key_input_field}
     Input Text    {user_key_input_field}    choice
     Click Button    ${save_button_settings}
+
+#Booking
+Add A New Group
+    Mouse Over    ${add_new_group}
+    Click Element    ${new_group}
+    Wait Until Element Is Visible    ${new_group_name}
+
+Set Group Name And Submit
+    [Arguments]    ${group_name}
+    Type In And Press Enter    ${new_group_name}    ${group_name}
+    Wait Until Element Is Visible    ${booking}
+
+Add A Text Item To A Group
+    Mouse Over My Element    ${add_new_item}
+    Click My Element    ${item_text}
+
+Enter New Text Item's Name
+    [Arguments]    ${item_name}
+    Click My Element    ${new_item_name}
+    Clear, Type In And Press Enter    ${new_item_name}    ${item_name}
+
+Go To MiniApp Tab
+    Click Element    ${miniapp_tab}
+
+Enter MiniApp Name
+    [Arguments]    ${miniapp_name}   ${miniapp_title}
+    Wait Until Element Is Visible   ${miniapp_title}
+    Clear Element Text   ${miniapp_title}
+    Input Text    ${miniapp_title}    ${miniapp_name}
+
+Select My MiniApp
+    [Arguments]   ${my_miniapp_name}
+    Wait Until Element Is Visible    ${miniapp_list}
+    @{items}    Get WebElements    ${miniapp_list}
+    FOR    ${item}    IN    @{items}
+        ${text}    Get Text    ${item}  # Get the text of the <h5> element
+        Run Keyword If    '${text}' == '${my_miniapp_name}'    Click Element    ${item}  # Click if text matches
+    END
+
+Delete Default MiniApp Section
+    Click My Element   ${default_section_locator}
+    Sleep    1s
+    Click My Element    ${delete_icon}
+    Sleep    1s
+
+Input My Component Title
+    [Arguments]   ${my_text}
+    Wait Until Element Is Visible   ${form_option_title}
+    Clear Element Text    ${form_option_title}
+    Input Text    ${form_option_title}    ${my_text}
+
+Input My Component Options
+    [Arguments]   ${my_options}
+    Wait Until Element Is Visible   ${form_option_options}
+    Clear Element Text    ${form_option_options}
+    ${length}    Get Length    ${my_options}
+    FOR   ${index}   IN RANGE    ${length}
+        ${option}    Set Variable    ${my_options}[${index}]
+        Press Keys    ${form_option_options}    ${option}   ENTER
+    END
+
+Input My Component Ukey
+    [Arguments]   ${my_ukey}
+    Wait Until Element Is Visible   ${form_option_ukey}
+    Clear Element Text    ${form_option_ukey}
+    Input Text    ${form_option_ukey}    ${my_ukey}
+
+Add MiniApp Component
+    [Arguments]   ${my_component}
+    Mouse Over My Element    ${add_new_miniapp_component}
+    Mouse Over My Element   ${miniapp_component_list}
+    Click My Element    ${my_component}
+
+Open Transition Settings
+    Wait Until Element Is Visible    ${outer_buttons_settings}
+    Click Element    ${outer_buttons_settings}
+    Sleep   1s
+    Wait Until Element Is Visible    ${inner_buttons_settings}
+    Click Button    ${inner_buttons_settings}
+    Sleep   1s
+
+Select Transition Option
+    [Arguments]   ${my_transition_option}
+    Wait Until Element Is Visible   ${transiotion_input}
+    Click My Element    ${transiotion_input}
+    Sleep   1s
+    Press Keys    ${transiotion_input}    ${my_transition_option}   ENTER
+    Sleep   1s
+
+Save Transition Settings
+    Wait Until Element Is Visible    ${save_settings_button}
+    Click Element    ${save_settings_button}
+    Sleep   1s
+    Wait Until Element Is Visible    ${save_transition_icon}
+    Click Element    ${save_transition_icon}
+    Sleep   1s
+
+Open Calendar Settings
+    Wait Until Element Is Visible    ${calendar_settings}
+    Click Element    ${calendar_settings}
+
+Set Calendar Ukey
+    [Arguments]   ${my_calendar_ukey}
+    Wait Until Element Is Visible   ${calendar_ukey}
+    Clear Element Text    ${calendar_ukey}
+    Input Text    ${calendar_ukey}    ${my_calendar_ukey}
+
+Set Calendar Transition
+    Select Radio Button    trans    chat
+    Wait Until Element Is Visible    ${calendar_chat_transition_input}
+    Clear Element Text    ${calendar_chat_transition_input}
+    Press Keys   ${calendar_chat_transition_input}   2:booking_confirm   ENTER
+
+Enter Chatflow Item Text
+    [Arguments]   ${my_input}   ${my_text}
+    Wait Until Element Is Visible    ${my_input}
+    Clear Element Text    ${my_input}
+    Press Keys   ${my_input}   ${my_text}   ENTER
+    Sleep   1s
+
+Set Transition To MiniApp
+    [Arguments]   ${my_view}
+    Click My Element    ${miniapp_transition_option}
+    Wait Until Element Is Visible    ${transition_option_input}
+    Clear Element Text    ${transition_option_input}
+    Press Keys   ${transition_option_input}   ${my_view}   ENTER
+
+Save Button Settings
+    Wait Until Element Is Visible   ${save_button_settings}
+    Click Element    ${save_button_settings}
+    
+
+
+
+
+
+
+
+
+
+
+
 

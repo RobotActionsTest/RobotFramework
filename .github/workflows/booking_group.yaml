@@ -1,0 +1,32 @@
+name: Robot Framework Test Booking API1.0
+
+on:
+  workflow_dispatch:
+
+jobs:
+    Run-Test:
+      runs-on: windows-latest
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v1
+        - uses: actions/cache@v2
+          id: cache
+          with:
+            path: ~/.cache/pip
+            key: ${{ runner.os }}-pip-${{ hashFiles('**/requirement.txt') }}
+
+        - name: Install pip dependencies
+          run: |
+            python.exe -m pip install --upgrade pip
+            python -m pip install -r requirement.txt
+
+        - name: Run Test
+          run: |
+            python -m robot --outputdir reports -x junit-report.xml --include Booking "tests/Booking.robot"
+          working-directory: ${{ github.workspace }}
+
+        - name: Publish test results
+          uses: actions/upload-artifact@v2
+          with:
+            name: robot-test-results
+            path: reports
