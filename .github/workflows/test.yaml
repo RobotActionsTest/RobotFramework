@@ -3,7 +3,7 @@ name: Run Tests Based on Bot Selection
 on:
   workflow_dispatch:
     inputs:
-      selected-bot:
+      selected-api:
         description: 'Select Bot API'
         required: true
         default: 'API1.0'
