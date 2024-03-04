@@ -27,6 +27,11 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirement.txt 
 
+      - name: Debug API Value
+        run: |
+          echo "Selected API: $selected-api"
+        shell: bash
+
       - name: Run Tests
         run: |
           if (${env:selected-api} -eq "API1.0") {
@@ -41,6 +46,11 @@ jobs:
             Write-Host "Invalid API selection: ${env:selected-api}"
             exit 1
           }
+
+      - name: Debug API Value
+        run: |
+          echo "Selected API: $selected-api"
+        shell: bash
 
       - name: Publish test results
         uses: actions/upload-artifact@v2
