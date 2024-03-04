@@ -30,11 +30,9 @@ jobs:
       - name: Run Tests
         run: |
           if (${env:selected-api} -eq "API1.0") {
-            Write-Host "Running tests for API1.0"
             python -m robot --outputdir reports -x junit-report.xml --include Test1 tests/Group1.robot
           }
           elseif (${env:selected-api} -eq "API2.0") {
-            Write-Host "Running tests for API2.0"
             python -m robot --outputdir reports -x junit-report.xml --include Test2 tests/Group1.robot
           }
           else {
