@@ -29,29 +29,23 @@ jobs:
 
       - name: Debug API Value
         run: |
-          echo "Selected API: $selected-api"
-        shell: pwsh
+          echo "Selected API: ${{ github.event.inputs.selected-api }}"
 
       - name: Run Tests
         run: |
-          if ($selected-api -eq "API1.0") {
-            Write-Host "Running tests for API1.0"
+          if [[ "${{ github.event.inputs.selected-api }}" == "API1.0" ]]; then
+            echo "Running tests for API1.0"
             python -m robot --outputdir reports -x junit-report.xml --include Test1 tests/Group1.robot
-          }
-          elseif ($selected-api -eq "API2.0") {
-            Write-Host "Running tests for API2.0"
+          elif [[ "${{ github.event.inputs.selected-api }}" == "API2.0" ]]; then
+            echo "Running tests for API2.0"
             python -m robot --outputdir reports -x junit-report.xml --include Test2 tests/Group1.robot
-          }
-          else {
-            Write-Host "Invalid API selection: $selected-api"
+          else
+            echo "Invalid API selection: ${{ github.event.inputs.selected-api }}"
             exit 1
-          }
-        shell: pwsh
+          fi
 
       - name: Publish test results
         uses: actions/upload-artifact@v2
         with:
           name: robot-test-results
           path: reports
-
-
