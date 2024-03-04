@@ -20,7 +20,7 @@ jobs:
         id: cache
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirement.txt') }} # Corrected path to requirements.txt
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirement.txt') }}
 
       - name: Install pip dependencies
         run: |
@@ -28,19 +28,19 @@ jobs:
           python -m pip install -r requirement.txt 
 
       - name: Run Tests
-          run: |
-            if ($env:selected-bot -eq "API1.0") {
-              Write-Host "Running tests for API 1.0"
-              python -m robot --outputdir reports -x junit-report.xml --include Test1 tests/Group1.robot
-            }
-            elseif ($env:selected-bot -eq "API2.0") {
-              Write-Host "Running tests for API 2.0"
-              python -m robot --outputdir reports -x junit-report.xml --include Test1 tests/Group1.robot
-            }
-            else {
-              Write-Host "Invalid API selection: $env:selected-bot"
-              exit 1
-            }
+        run: |
+          if ($env:selected-bot -eq "API1.0") {
+            Write-Host "Running tests for API 1.0"
+            python -m robot --outputdir reports -x junit-report.xml --include Test1 tests/Group1.robot
+          }
+          elseif ($env:selected-bot -eq "API2.0") {
+            Write-Host "Running tests for API 2.0"
+            python -m robot --outputdir reports -x junit-report.xml --include Test1 tests/Group1.robot
+          }
+          else {
+            Write-Host "Invalid API selection: $env:selected-bot"
+            exit 1
+          }
 
       - name: Publish test results
         uses: actions/upload-artifact@v2
