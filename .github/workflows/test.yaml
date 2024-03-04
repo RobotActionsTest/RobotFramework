@@ -30,7 +30,7 @@ jobs:
       - name: Debug API Value
         run: |
           echo "Selected API: $selected-api"
-        shell: bash
+        shell: pwsh
 
       - name: Run Tests
         run: |
@@ -46,6 +46,7 @@ jobs:
             Write-Host "Invalid API selection: $selected-api"
             exit 1
           }
+        shell: pwsh
 
       - name: Publish test results
         uses: actions/upload-artifact@v2
