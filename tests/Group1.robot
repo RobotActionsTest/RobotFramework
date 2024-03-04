@@ -29,12 +29,35 @@ Creating a New Chat Group
     Type In And Press Enter    ${new_group_name}    ${my_group_name}
     Wait Until Element Is Visible and Enabled    ${group1}
 
+Creating a New Chat Group
+
+    ${my_group_name}   Set Variable   group1
+
+    [Documentation]    This test adds group1 to a BR V2 API1.0 bot
+    [Tags]   AppTab   API2.0   Regression   Test2
+    [Setup]    Setup Chrome Webdriver and Access URL
+               Login   ${credentials}[email]   ${credentials}[password]
+               Open Specified Bot   ${bot_names_list}   ${my_api20_bot_name}
+    [Teardown]    Close Browser
+
+    # Navigate to the Chatflow tab
+    Go To Chatflow Tab
+
+    # Add a new group
+    Mouse Over    ${add_new_group}
+    Click My Element    ${new_group}
+    Wait Until Element Is Visible and Enabled    ${new_group_name}
+
+    # Set the name for the new group and press Enter
+    Type In And Press Enter    ${new_group_name}    ${my_group_name}
+    Wait Until Element Is Visible and Enabled    ${group1}
+
 Creating text items (actions)
 
     ${my_item_name}    Create List    textitem1    textitem2    textitem3    textitem4
 
     [Documentation]    This test adds textitem1, textitem2, textitem3, textitem4 text actions to group1
-    [Tags]    AppTab    API1.0    Regression    Test1
+    [Tags]    AppTab    Regression    Test1
     [Setup]    Setup Chrome Webdriver and Access URL
                Login    ${credentials}[email]    ${credentials}[password]
                Open Specified Bot    ${bot_names_list}    ${my_api10_bot_name}
@@ -59,7 +82,7 @@ Entering text in the text item's input field
     ${my_item_textarea_locator}    Create List    (//textarea[@class='msg with-emoticon'])[1]   (//textarea[@class='msg with-emoticon'])[2]   (//textarea[@class='msg with-emoticon'])[3]   (//textarea[@class='msg with-emoticon'])[4]
 
     [Documentation]    This test enters "text1"-"text4" in the text fields of the created text items
-    [Tags]    AppTab    API1.0    Regression    Test1
+    [Tags]    AppTab    Regression    Test1
     [Setup]    Setup Chrome Webdriver and Access URL
                Login    ${credentials}[email]    ${credentials}[password]
                Open Specified Bot    ${bot_names_list}    ${my_api10_bot_name}
@@ -81,7 +104,7 @@ Adding a "big" button to a text item (textitem1)
     ${my_big_button_text}  Set Variable   text1 button
 
     [Documentation]    This test adds a "big" button to textitem1 in the "group1" chatflow.
-    [Tags]    AppTab    API1.0    Regression    Test1
+    [Tags]    AppTab    Regression    Test1
     [Setup]    Setup Chrome Webdriver and Access URL
                Login    ${credentials}[email]    ${credentials}[password]
                Open Specified Bot    ${bot_names_list}    ${my_api10_bot_name}
