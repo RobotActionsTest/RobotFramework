@@ -16,11 +16,19 @@ def setup_chrome_webdriver():
     return driver
 
 
-@keyword
 def get_chromedriver_path():
-    driver_path = ChromeDriverManager().install()
-    print(driver_path)
-    return driver_path
+    service = ChromeService(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service)
+    driver.quit()
+    return ChromeDriverManager().install()
+
+
+#old
+#@keyword
+#def get_chromedriver_path():
+    #driver_path = ChromeDriverManager().install()
+    #print(driver_path)
+    #return driver_path
 
 @keyword
 def get_geckodriver_path():

@@ -623,7 +623,6 @@ Upload an image for the image item
                Open Specified Bot    ${bot_names_list}    ${my_api10_bot_name}
     [Teardown]    Close Browser
 
-
     Go To Chatflow Tab
     Select group and chatflow item   ${group1}   ${image1}
     Click My Element    ${my_imageitem_camera_icon}

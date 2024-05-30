@@ -21,6 +21,8 @@ jobs:
             pip install robotframework
             pip install robotframework-seleniumlibrary
             pip install webdriver-manager
+            python -m pip install --upgrade pip
+            pip install pyautogui
             python -m pip install -r requirement.txt
 
         - name: Run Test
