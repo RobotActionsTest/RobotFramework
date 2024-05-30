@@ -575,10 +575,10 @@ Adding an image map item
 
 Uploading an imagemap image
 
-    ${my_imap_image}   Set Variable   C:\\Users\\Professional\\PycharmProjects\\suffering-upd\\uploaddata\\image_map.jpg
+    ${my_imap_image}   Set Variable   ${IMAGE_PATH}\\image_map.jpg
 
     [Documentation]    This test uploads an image by link for "image_map" item in the "group1" chatflow.
-    [Tags]    AppTab   Regression   API10
+    [Tags]    AppTab   Regression   API10   Image
     [Setup]    Setup Chrome Webdriver and Access URL
                Login    ${credentials}[email]    ${credentials}[password]
                Open Specified Bot    ${bot_names_list}    ${my_api10_bot_name}
@@ -613,8 +613,9 @@ Adding an image item
     Clear Element Text    ${img_name}
     Press Keys   ${img_name}   image1   ENTER
 
-#this doesn't work
 Upload an image for the image item
+
+    ${my_imageitem_image}   Set Variable   ${IMAGE_PATH}\\flamingo.jpg
 
     [Documentation]    This test uploades on image by link for "image1" item in the "group1" chatflow.
     [Tags]    AppTab   Regression
@@ -623,11 +624,13 @@ Upload an image for the image item
                Open Specified Bot    ${bot_names_list}    ${my_api10_bot_name}
     [Teardown]    Close Browser
 
-    #Navigate to the Chatflow tab
-    Go To Chatflow Tab
 
-    #Click the "image1" item in "group1"
+    Go To Chatflow Tab
     Select group and chatflow item   ${group1}   ${image1}
+    Click My Element    ${my_imageitem_camera_icon}
+    Sleep   4s
+    Upload File   ${my_imageitem_image}
+    Sleep   10s
 
 Adding a 'Quick reaction' button to an image item (image1)
 
