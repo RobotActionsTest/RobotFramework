@@ -54,7 +54,7 @@ Open Specified Bot
         Run Keyword If    '${target_text}' in '${cell_text}'    Click Element    ${cell_element}
         Exit For Loop If    '${target_text}' in '${cell_text}'   # Exit the loop if the text is found
     END
-    Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
+    Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=60s
 
 
 Open Bot 1
@@ -236,10 +236,13 @@ Input My Component Options
     [Arguments]   ${my_options}
     Wait Until Element Is Visible   ${form_option_options}
     Clear Element Text    ${form_option_options}
+    Sleep    1s
     ${length}    Get Length    ${my_options}
     FOR   ${index}   IN RANGE    ${length}
+        Sleep    1s
         ${option}    Set Variable    ${my_options}[${index}]
         Press Keys    ${form_option_options}    ${option}   ENTER
+        Sleep    1s
     END
 
 Input My Component Ukey
@@ -250,9 +253,13 @@ Input My Component Ukey
 
 Add MiniApp Component
     [Arguments]   ${my_component}
+    Sleep   1s
     Mouse Over My Element    ${add_new_miniapp_component}
+    Sleep   1s
     Mouse Over My Element   ${miniapp_component_list}
+    Sleep   1s
     Click My Element    ${my_component}
+    Sleep   1s
 
 Open Transition Settings
     Wait Until Element Is Visible    ${outer_buttons_settings}
@@ -270,11 +277,19 @@ Select Transition Option
     Press Keys    ${transiotion_input}    ${my_transition_option}   ENTER
     Sleep   1s
 
+Open MiniApp Transition Settings
+    Wait Until Element Is Visible    ${outer_buttons_settings_miniapp}
+    Click Element    ${outer_buttons_settings_miniapp}
+    Sleep   1s
+    Wait Until Element Is Visible    ${inner_buttons_settings}
+    Click Button    ${inner_buttons_settings}
+    Sleep   1s
+
 Save Transition Settings
-    Wait Until Element Is Visible    ${save_settings_button}
+    Sleep   1s
     Click Element    ${save_settings_button}
     Sleep   1s
-    Wait Until Element Is Visible    ${save_transition_icon}
+    Wait Until Element Is Visible   ${save_transition_icon}
     Click Element    ${save_transition_icon}
     Sleep   1s
 
@@ -301,6 +316,20 @@ Enter Chatflow Item Text
     Press Keys   ${my_input}   ${my_text}   ENTER
     Sleep   1s
 
+Enter Action Area Name
+    [Arguments]   ${my_action_area_input}   ${my_action_area_name}
+    Wait Until Element Is Visible   ${my_action_area_input}
+    Clear Element Text    ${my_action_area_input}
+    Press Keys   ${my_action_area_input}   ${my_action_area_name}   ENTER
+    Sleep   1s
+
+Select Action
+    [Arguments]   ${my_action_input}   ${my_action}   ${my_action_locator}
+    Wait Until Element Is Visible   ${my_action_input}
+    Clear Element Text    ${my_action_input}
+    Press Keys   ${my_action_input}    ${my_action}
+    Click My Element    ${my_action_locator}
+
 Set Transition To MiniApp
     [Arguments]   ${my_view}
     Click My Element    ${miniapp_transition_option}
@@ -311,7 +340,15 @@ Set Transition To MiniApp
 Save Button Settings
     Wait Until Element Is Visible   ${save_button_settings}
     Click Element    ${save_button_settings}
-    
+
+Upload File
+    [Arguments]   ${my_file_path}
+    Upload Image Map Item Image    ${my_file_path}
+
+
+
+
+
 
 
 
