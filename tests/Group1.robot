@@ -421,7 +421,7 @@ Adding an image carousel item (image_carousel)
     Select group and chatflow item    ${group1}    ${image_card}
     Click My Element    ${image_card_name}
     Clear Element Text    ${image_card_name}
-    Press Keys   ${image_card_name}   image_carousel   ENTER
+    Press Keys   ${image_card_name}   ${my_item_name}   ENTER
 
 Setting a data source and adding a "big" button for an image carousel item
 
@@ -499,7 +499,7 @@ Adding a flex message item
     Select group and chatflow item    ${group1}    ${flex}
     Click My Element    ${flex_name}
     Clear Element Text    ${flex_name}
-    Press Keys   ${flex_name}   flex_message   ENTER
+    Press Keys   ${flex_name}   ${my_item_name}   ENTER
 
 Adding a flex message content
 
@@ -570,7 +570,7 @@ Adding an image map item
     Select group and chatflow item    ${group1}    ${imap}
     Click My Element    ${imap_name}
     Clear Element Text    ${imap_name}
-    Press Keys   ${imap_name}   image_map   ENTER
+    Press Keys   ${imap_name}   ${my_item_name}   ENTER
 
 Uploading an imagemap image
 
@@ -610,13 +610,13 @@ Adding an image item
     Select group and chatflow item    ${group1}    ${image}
     Click My Element    ${img_name}
     Clear Element Text    ${img_name}
-    Press Keys   ${img_name}   image1   ENTER
+    Press Keys   ${img_name}   ${my_item_name}   ENTER
 
 Upload an image for the image item
 
     ${my_imageitem_image}   Set Variable   ${IMAGE_PATH}\\flamingo.jpg
 
-    [Documentation]    This test uploades on image by link for "image1" item in the "group1" chatflow.
+    [Documentation]    This test uploades an mage for "image1" item in the "group1" chatflow.
     [Tags]    AppTab   Regression
     [Setup]    Setup Chrome Webdriver and Access URL
                Login    ${credentials}[email]    ${credentials}[password]
@@ -628,7 +628,7 @@ Upload an image for the image item
     Click My Element    ${my_imageitem_camera_icon}
     Sleep   4s
     Upload File   ${my_imageitem_image}
-    Sleep   10s
+    Sleep   25s
 
 Adding a 'Quick reaction' button to an image item (image1)
 
@@ -676,7 +676,31 @@ Adding a video item
     Select group and chatflow item    ${group1}    ${video}
     Click My Element    ${vid_name}
     Clear Element Text    ${vid_name}
-    Press Keys   ${vid_name}   video1   ENTER
+    Press Keys   ${vid_name}   ${my_item_name}   ENTER
+
+Upload an image and a video for the video item
+
+    ${my_videoitem_image}   Set Variable   ${IMAGE_PATH}\\flamingo.jpg
+    ${my_videoitem_video}   Set Variable   ${IMAGE_PATH}\\Flamingo1.mp4
+
+    [Documentation]    This test uploades an imageand a video for "video1" item in the "group1" chatflow.
+    [Tags]    AppTab   Regression
+    [Setup]    Setup Chrome Webdriver and Access URL
+               Login    ${credentials}[email]    ${credentials}[password]
+               Open Specified Bot    ${bot_names_list}    ${my_api10_bot_name}
+    [Teardown]    Close Browser
+
+    Go To Chatflow Tab
+    Select group and chatflow item   ${group1}   ${video1}
+    Click My Element    ${my_video_item_camera_icon}
+    Sleep   4s
+    Upload File   ${my_videoitem_image}
+    Sleep   10s
+    Select group and chatflow item   ${group1}   ${video1}
+    Click My Element    ${my_video_item_videocam_icon}
+    Sleep   4s
+    Upload File   ${my_videoitem_video}
+    Sleep   10s
 
 Adding a 'Quick reaction' button to an video item (video1)
 
@@ -703,6 +727,28 @@ Adding a 'Quick reaction' button to an video item (video1)
 
     #Save "big" button's settings
     Click Button    ${save_button_settings}
+
+Adding and setting up a conditional item
+
+    ${my_item_name}    Set Variable    conditional
+
+    [Documentation]    This test adds and sets up a "conditional" item in the "group1" chatflow.
+    [Tags]    AppTab   Regression
+    [Setup]    Setup Chrome Webdriver and Access URL
+               Login    ${credentials}[email]    ${credentials}[password]
+               Open Specified Bot    ${bot_names_list}    ${my_api10_bot_name}
+    [Teardown]    Close Browser
+
+    #Navigate to the Chatflow tab
+    Go To Chatflow Tab
+    Click Element    ${group1}
+    Mouse Over My Element   ${add_new_item}
+    Add My Chatflow Item   ${item_conditional}
+    Press Keys   ${new_item_name}   ENTER
+    Select group and chatflow item    ${group1}    ${video}
+    Click My Element    ${vid_name}
+    Clear Element Text    ${vid_name}
+    Press Keys   ${vid_name}   video1   ENTER
 
 
 

@@ -33,13 +33,6 @@ Setup Chrome Webdriver and Access URL
     #Open Browser    https://pre.bonp.me//member    browser=chrome    options=${options}   executable_path=${chromedriver_path}
     #Set Selenium Implicit Wait    15s
 
-New SetUP
-    ${driver}=    Setup Chrome Webdriver
-    Create Webdriver    Chrome    options=add_argument(--disable-notifications)    options=add_argument(--disable-infobars)    options=add_argument(--disable-extensions)    options=add_argument(--no-sandbox)    options=add_argument(--start-maximized)
-    Go To    https://pre.bonp.me/member
-    Set Selenium Implicit Wait    15s
-
-
 Setup Firefox Webdriver and Access URL
     ${geckodriver_path}=   driversync.Get Geckodriver Path
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].FirefoxOptions()    sys
