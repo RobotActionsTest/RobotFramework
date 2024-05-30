@@ -25,6 +25,7 @@ create API1.0 bot
     FOR    ${value}    IN    @{checkbox_values}
         Run Keyword If    '${value}' != 'chatgpt'    Click Element    //input[@value='${value}']
     END
+
     #select plan option
     Select Radio Button   plan   pro
     #select API1.0 option
