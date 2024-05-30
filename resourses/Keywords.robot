@@ -4,7 +4,7 @@ Resource    Variables.robot
 Library    SeleniumLibrary
 Library    OperatingSystem
 Library    DateTime
-Library   driversync.py
+Library    driversync.py
 Library    Collections
 Library    BuiltIn
 Library    XML
@@ -20,6 +20,12 @@ Setup Chrome Webdriver and Access URL
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --start-maximized
     Open Browser    https://pre.bonp.me//member    browser=chrome    options=${options}   executable_path=${chromedriver_path}
+    Set Selenium Implicit Wait    15s
+
+New SetUP
+    ${driver}=    Setup Chrome Webdriver
+    Create Webdriver    Chrome    options=add_argument(--disable-notifications)    options=add_argument(--disable-infobars)    options=add_argument(--disable-extensions)    options=add_argument(--no-sandbox)    options=add_argument(--start-maximized)
+    Go To    https://pre.bonp.me/member
     Set Selenium Implicit Wait    15s
 
 

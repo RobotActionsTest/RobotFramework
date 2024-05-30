@@ -2,7 +2,6 @@
 
 Resource   ../resourses/Keywords.robot
 Resource   ../resourses/Variables.robot
-Resource   ../uploaddata/flex_variable.robot
 
 *** Test Cases ***
 
