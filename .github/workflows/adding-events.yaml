@@ -1,4 +1,4 @@
-name: Test Image upload
+name: Adding Events
 
 on:
   workflow_dispatch:
