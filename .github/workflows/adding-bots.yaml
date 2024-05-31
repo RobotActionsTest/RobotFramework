@@ -1,4 +1,4 @@
-name: Add New Bots
+name: Adding New Bots
 
 on:
   workflow_dispatch:
