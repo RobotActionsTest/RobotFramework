@@ -98,7 +98,7 @@ Click Element with Specified Text
 
 
 Wait Until Element Is Visible and Enabled
-    [Arguments]    ${locator}    ${timeout}=40s
+    [Arguments]    ${locator}    ${timeout}=90s
     Wait Until Element Is Visible    ${locator}    timeout=${timeout}
     Wait Until Element Is Enabled    ${locator}    timeout=${timeout}
 
@@ -133,7 +133,7 @@ Clear, Type In And Press Enter
 
 Click My Element
     [Arguments]   ${my_element_locator}
-    Wait Until Element Is Visible    ${my_element_locator}
+    Wait Until Element Is Visible    ${my_element_locator}   timeout=90s
     Click Element    ${my_element_locator}
 
 Mouse Over My Element

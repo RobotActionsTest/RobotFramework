@@ -28,7 +28,7 @@ Creating text items (actions) in the miniapps group
     ${my_item_textarea_locator}    Create List    (//textarea[@class='msg with-emoticon'])[1]   (//textarea[@class='msg with-emoticon'])[2]
 
     [Documentation]    This test adds form_trigger and form_finish text actions to miniapps group
-    [Tags]    AppTab    Regression    Test1   Miniapps
+    [Tags]    AppTab    Regression    API1.0   Miniapps
     [Setup]    Setup Chrome Webdriver and Access URL
                Login    ${credentials}[email]    ${credentials}[password]
                Open Specified Bot    ${bot_names_list}    ${my_api10_bot_name}
@@ -225,17 +225,3 @@ Setting up form2 miniapp
     Input My Component Ukey    ukey6
     Click My Element    ${save_icon}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
