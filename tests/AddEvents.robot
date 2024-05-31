@@ -75,9 +75,9 @@ add Events to API2.0 bot
 
     ${event_link_list}=   Create List   https://www.udemy.com/   https://www.netflix.com/   https://soundcloud.com/
     ${event_title_list}=    Create List   Test Event1   Test Event2   Test Event3
-    ${event1_image}   Set Variable   C://Users//Professional//PycharmProjects//suffering-upd//uploaddata//event_img1.jpg
-    ${event2_image}   Set Variable   C://Users//Professional//PycharmProjects//suffering-upd//uploaddata//event_img2.jpg
-    ${event3_image}   Set Variable   C://Users//Professional//PycharmProjects//suffering-upd//uploaddata//event_img3.jpg
+    ${event1_image}   Set Variable   ${IMAGE_PATH}//event_img1.jpg
+    ${event2_image}   Set Variable   ${IMAGE_PATH}//event_img2.jpg
+    ${event3_image}   Set Variable   ${IMAGE_PATH}//event_img3.jpg
     ${description}   Set Variable   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae arcu turpis. Morbi quis dignissim nunc, nec luctus nibh. In luctus porttitor posuere. Quisque.
     ${seats}   Set Variable   1
 

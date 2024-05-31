@@ -9,7 +9,7 @@ add Store to API1.0 bot
 
     ${my_store_url}   Set Variable   https://jerryspringertv.com/
     ${my_store_name}   Set Variable   store1
-    ${my_store_image}   Set Variable   C://Users//Professional//PycharmProjects//RobotFramework//uploaddata//flamingo.jpg
+    ${my_store_image}   Set Variable   ${IMAGE_PATH}//flamingo.jpg
     ${my_store_description}   Set Variable   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non ornare ante, non vestibulum elit.
     ${my_store_category}   Set Variable   TestCategory
     ${my_store_country}   Set Variable   Japan
@@ -22,7 +22,7 @@ add Store to API1.0 bot
     ${my_store_rms_capacity}   Set Variable   1
 
     [Documentation]    This test adds store1 to a BR V2 API1.0 bot
-    [Tags]   EventsTab   API1.0   Regression
+    [Tags]   ReservationTab   API1.0   Regression
     [Setup]    Setup Chrome Webdriver and Access URL
                Login   ${credentials}[email]   ${credentials}[password]
                Open Specified Bot   ${bot_names_list}   ${my_api10_bot_name}
@@ -68,7 +68,7 @@ add store to API2.0 bot
 
     ${my_store_url}   Set Variable   https://jerryspringertv.com/
     ${my_store_name}   Set Variable   store1
-    ${my_store_image}   Set Variable   C://Users//Professional//PycharmProjects//RobotFramework//uploaddata//flamingo.jpg
+    ${my_store_image}   Set Variable   ${IMAGE_PATH}//flamingo.jpg
     ${my_store_description}   Set Variable   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non ornare ante, non vestibulum elit.
     ${my_store_category}   Set Variable   TestCategory
     ${my_store_country}   Set Variable   Japan
@@ -81,7 +81,7 @@ add store to API2.0 bot
     ${my_store_rms_capacity}   Set Variable   1
 
     [Documentation]    This test adds store1 to a BR V2 API2.0 bot
-    [Tags]   EventsTab   API2.0   Regression
+    [Tags]   ReservationTab   API2.0   Regression
     [Setup]    Setup Chrome Webdriver and Access URL
                Login   ${credentials}[email]   ${credentials}[password]
                Open Specified Bot   ${bot_names_list}   ${my_api20_bot_name}
