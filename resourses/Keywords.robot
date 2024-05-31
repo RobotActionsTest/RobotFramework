@@ -28,7 +28,8 @@ Setup Chrome Webdriver and Access URL
     Call Method    ${options}    add_argument    --disable-infobars
     Call Method    ${options}    add_argument    --disable-extensions
     Call Method    ${options}    add_argument    --no-sandbox
-    Call Method    ${options}    add_argument    --start-maximized
+    #Call Method    ${options}    add_argument    --start-maximized
+    Call Method    ${options}    add_argument    --window-size=1920,1080
     Open Browser    https://pre.bonp.me/member    browser=chrome    options=${options}    executable_path=${chromedriver_path}
     Set Selenium Implicit Wait    15s
 
