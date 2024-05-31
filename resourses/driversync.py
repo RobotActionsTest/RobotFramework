@@ -19,7 +19,6 @@ def setup_chrome_webdriver():
 def get_chromedriver_path():
     service = ChromeService(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service)
-    driver.quit()
     return ChromeDriverManager().install()
 
 

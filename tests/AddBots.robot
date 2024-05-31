@@ -12,7 +12,7 @@ create API1.0 bot
 
     [Documentation]    This test creates a BR V2 API1.0 bot under Evolany Co., Ltd. company
     [Tags]   NewAppPopup   API1.0   Regression   Test1   Test2
-    [Setup]    Setup Chrome Webdriver and Access URL
+    [Setup]    Setup Chrome Webdriver New
                Login   ${credentials}[email]   ${credentials}[password]
     [Teardown]    Close Browser
 

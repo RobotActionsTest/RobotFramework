@@ -11,6 +11,16 @@ Library    XML
 
 *** Keywords ***
 
+Setup Chrome Webdriver New
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
+    Call Method    ${options}    add_argument    --disable-notifications
+    Call Method    ${options}    add_argument    --disable-infobars
+    Call Method    ${options}    add_argument    --disable-extensions
+    Call Method    ${options}    add_argument    --no-sandbox
+    Call Method    ${options}    add_argument    --start-maximized
+    Open Browser    https://pre.bonp.me/member    browser=chrome    options=${options}    executable_path=${CHROMEDRIVER_PATH}
+    Set Selenium Implicit Wait    15s
+
 Setup Chrome Webdriver and Access URL
     ${chromedriver_path}=    Get Chromedriver Path
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys

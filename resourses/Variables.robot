@@ -1,6 +1,7 @@
 *** Variables ***
 ${url}   https://pre.bonp.me//member
 ${IMAGE_PATH}  C:\\Users\\Professional\\PycharmProjects\\RobotFramework\\uploaddata
+${CHROMEDRIVER_PATH}   C:\\Users\\Professional\\PycharmProjects\\RobotFramework\\drivers\\chromedriver.exe
 #Bot Names
 ${my_api10_bot_name}   test1
 ${my_api20_bot_name}   test2
