@@ -1,94 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.10 on win32)" generated="20240531 08:11:35.082" rpa="false" schemaversion="4">
-<suite id="s1" name="Group1" source="C:\Users\Professional\PycharmProjects\RobotFramework\tests\Group1.robot">
-<test id="s1-t1" name="Adding a 'Quick reaction' buttons to a text item (textitem2)" line="127">
-<kw name="Setup Chrome Webdriver New" library="Keywords" type="SETUP">
+<robot generator="Robot 6.1.1 (Python 3.10.10 on win32)" generated="20240531 08:43:29.200" rpa="false" schemaversion="4">
+<suite id="s1" name="AddBots" source="C:\Users\Professional\PycharmProjects\RobotFramework\tests\AddBots.robot">
+<test id="s1-t1" name="create API2.0 bot" line="47">
+<kw name="Setup Chrome Webdriver and Access URL" library="Keywords" type="SETUP">
+<kw name="Get Chromedriver Path" library="driversync">
+<var>${chromedriver_path}</var>
+<msg timestamp="20240531 08:43:29.525" level="INFO">====== WebDriver manager ======</msg>
+<msg timestamp="20240531 08:43:30.152" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg timestamp="20240531 08:43:30.321" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg timestamp="20240531 08:43:30.429" level="INFO">Driver [C:\Users\Professional\.wdm\drivers\chromedriver\win64\125.0.6422.141\chromedriver-win32/chromedriver.exe] found in cache</msg>
+<msg timestamp="20240531 08:43:31.402" level="INFO">====== WebDriver manager ======</msg>
+<msg timestamp="20240531 08:43:32.156" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg timestamp="20240531 08:43:32.266" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg timestamp="20240531 08:43:32.390" level="INFO">Driver [C:\Users\Professional\.wdm\drivers\chromedriver\win64\125.0.6422.141\chromedriver-win32/chromedriver.exe] found in cache</msg>
+<msg timestamp="20240531 08:43:34.443" level="INFO">${chromedriver_path} = C:\Users\Professional\.wdm\drivers\chromedriver\win64\125.0.6422.141\chromedriver-win32/chromedriver.exe</msg>
+<status status="PASS" starttime="20240531 08:43:29.525" endtime="20240531 08:43:34.444"/>
+</kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240531 08:11:35.396" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00000226D0154D00&gt;</msg>
-<status status="PASS" starttime="20240531 08:11:35.396" endtime="20240531 08:11:35.397"/>
+<msg timestamp="20240531 08:43:34.444" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000024681F15C60&gt;</msg>
+<status status="PASS" starttime="20240531 08:43:34.444" endtime="20240531 08:43:34.444"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-notifications</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240531 08:11:35.398" endtime="20240531 08:11:35.398"/>
+<status status="PASS" starttime="20240531 08:43:34.445" endtime="20240531 08:43:34.445"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-infobars</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240531 08:11:35.398" endtime="20240531 08:11:35.398"/>
+<status status="PASS" starttime="20240531 08:43:34.445" endtime="20240531 08:43:34.445"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-extensions</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240531 08:11:35.398" endtime="20240531 08:11:35.399"/>
+<status status="PASS" starttime="20240531 08:43:34.446" endtime="20240531 08:43:34.446"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--no-sandbox</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240531 08:11:35.399" endtime="20240531 08:11:35.399"/>
+<status status="PASS" starttime="20240531 08:43:34.446" endtime="20240531 08:43:34.446"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--start-maximized</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240531 08:11:35.399" endtime="20240531 08:11:35.399"/>
+<status status="PASS" starttime="20240531 08:43:34.446" endtime="20240531 08:43:34.447"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://pre.bonp.me/member</arg>
 <arg>browser=chrome</arg>
 <arg>options=${options}</arg>
-<arg>executable_path=${CHROMEDRIVER_PATH}</arg>
+<arg>executable_path=${chromedriver_path}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240531 08:11:35.401" level="INFO">Opening browser 'chrome' to base url 'https://pre.bonp.me/member'.</msg>
-<status status="PASS" starttime="20240531 08:11:35.400" endtime="20240531 08:14:17.286"/>
+<msg timestamp="20240531 08:43:34.448" level="INFO">Opening browser 'chrome' to base url 'https://pre.bonp.me/member'.</msg>
+<status status="PASS" starttime="20240531 08:43:34.447" endtime="20240531 08:43:37.833"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>15s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20240531 08:14:17.286" endtime="20240531 08:14:17.288"/>
+<status status="PASS" starttime="20240531 08:43:37.834" endtime="20240531 08:43:37.836"/>
 </kw>
-<status status="PASS" starttime="20240531 08:11:35.396" endtime="20240531 08:14:17.288"/>
+<status status="PASS" starttime="20240531 08:43:29.524" endtime="20240531 08:43:37.837"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${checkbox_values}</var>
+<arg>crm</arg>
+<arg>events</arg>
+<arg>coupons</arg>
+<arg>catalog</arg>
+<arg>rms</arg>
+<arg>chat</arg>
+<arg>ec</arg>
+<arg>mail</arg>
+<arg>stores</arg>
+<arg>campaign</arg>
+<arg>elgana</arg>
+<arg>g_events</arg>
+<arg>bot_posts</arg>
+<arg>user_logs</arg>
+<arg>linepoints</arg>
+<arg>sfa_salesforce</arg>
+<arg>sfa_hubspot</arg>
+<arg>lp</arg>
+<arg>stamp_card</arg>
+<arg>ms365</arg>
+<arg>files</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20240531 08:43:37.838" level="INFO">${checkbox_values} = ['crm', 'events', 'coupons', 'catalog', 'rms', 'chat', 'ec', 'mail', 'stores', 'campaign', 'elgana', 'g_events', 'bot_posts', 'user_logs', 'linepoints', 'sfa_salesforce', 'sfa_hubspot', 'lp', 'stamp_c...</msg>
+<status status="PASS" starttime="20240531 08:43:37.837" endtime="20240531 08:43:37.838"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
-<var>${my_rn_button_name1}</var>
-<arg>choice1</arg>
+<var>${my_company_name}</var>
+<arg>Evolany Co., Ltd.</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240531 08:14:17.289" level="INFO">${my_rn_button_name1} = choice1</msg>
-<status status="PASS" starttime="20240531 08:14:17.288" endtime="20240531 08:14:17.289"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${my_rn_button_name2}</var>
-<arg>choice2</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240531 08:14:17.290" level="INFO">${my_rn_button_name2} = choice2</msg>
-<status status="PASS" starttime="20240531 08:14:17.289" endtime="20240531 08:14:17.290"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${my_target_chatflow_item}</var>
-<arg>3:textitem3</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240531 08:14:17.290" level="INFO">${my_target_chatflow_item} = 3:textitem3</msg>
-<status status="PASS" starttime="20240531 08:14:17.290" endtime="20240531 08:14:17.290"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${my_ukey_value}</var>
-<arg>choice</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240531 08:14:17.291" level="INFO">${my_ukey_value} = choice</msg>
-<status status="PASS" starttime="20240531 08:14:17.290" endtime="20240531 08:14:17.291"/>
+<msg timestamp="20240531 08:43:37.840" level="INFO">${my_company_name} = Evolany Co., Ltd.</msg>
+<status status="PASS" starttime="20240531 08:43:37.839" endtime="20240531 08:43:37.840"/>
 </kw>
 <kw name="Login" library="Keywords">
 <arg>${credentials}[email]</arg>
@@ -96,330 +115,254 @@
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${environment}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240531 08:14:17.292" level="INFO">Opening url 'https://pre.bonp.me//member'</msg>
-<msg timestamp="20240531 08:14:17.304" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+<msg timestamp="20240531 08:43:37.841" level="INFO">Opening url 'https://pre.bonp.me//member'</msg>
+<msg timestamp="20240531 08:43:37.866" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=125.0.6422.113)
 Stacktrace:
-	GetHandleVerifier [0x00007FF7A9601522+60802]
-	(No symbol) [0x00007FF7A957AC22]
-	(No symbol) [0x00007FF7A9437CE4]
-	(No symbol) [0x00007FF7A940DFDF]
-	(No symbol) [0x00007FF7A94B1E57]
-	(No symbol) [0x00007FF7A94C98D1]
-	(No symbol) [0x00007FF7A94AA923]
-	(No symbol) [0x00007FF7A9478FEC]
-	(No symbol) [0x00007FF7A9479C21]
-	GetHandleVerifier [0x00007FF7A990413D+3217821]
-	GetHandleVerifier [0x00007FF7A99460D7+3488055]
-	GetHandleVerifier [0x00007FF7A993F05F+3459263]
-	GetHandleVerifier [0x00007FF7A96BB866+823494]
-	(No symbol) [0x00007FF7A9585FBF]
-	(No symbol) [0x00007FF7A9580EE4]
-	(No symbol) [0x00007FF7A9581072]
-	(No symbol) [0x00007FF7A95718C4]
-	BaseThreadInitThunk [0x00007FF9791F7034+20]
-	RtlUserThreadStart [0x00007FF979442651+33]
+	GetHandleVerifier [0x0026B8E3+45827]
+	(No symbol) [0x001FDCC4]
+	(No symbol) [0x000F150F]
+	(No symbol) [0x000CE133]
+	(No symbol) [0x0015949F]
+	(No symbol) [0x0016B8E6]
+	(No symbol) [0x00152B96]
+	(No symbol) [0x00126998]
+	(No symbol) [0x0012751D]
+	GetHandleVerifier [0x00524513+2899763]
+	GetHandleVerifier [0x0057793D+3240797]
+	GetHandleVerifier [0x002F13B4+593364]
+	GetHandleVerifier [0x002F82DC+621820]
+	(No symbol) [0x002070A4]
+	(No symbol) [0x002037A8]
+	(No symbol) [0x00203947]
+	(No symbol) [0x001F59FE]
+	BaseThreadInitThunk [0x75E4FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77597A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77597A4E+238]
+	(No symbol) [0x00000000]
 </msg>
-<msg timestamp="20240531 08:14:17.306" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+<msg timestamp="20240531 08:43:37.867" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=125.0.6422.113)
 Stacktrace:
-	GetHandleVerifier [0x00007FF7A9601522+60802]
-	(No symbol) [0x00007FF7A957AC22]
-	(No symbol) [0x00007FF7A9437CE4]
-	(No symbol) [0x00007FF7A940DFDF]
-	(No symbol) [0x00007FF7A94B1E57]
-	(No symbol) [0x00007FF7A94C98D1]
-	(No symbol) [0x00007FF7A94AA923]
-	(No symbol) [0x00007FF7A9478FEC]
-	(No symbol) [0x00007FF7A9479C21]
-	GetHandleVerifier [0x00007FF7A990413D+3217821]
-	GetHandleVerifier [0x00007FF7A99460D7+3488055]
-	GetHandleVerifier [0x00007FF7A993F05F+3459263]
-	GetHandleVerifier [0x00007FF7A96BB866+823494]
-	(No symbol) [0x00007FF7A9585FBF]
-	(No symbol) [0x00007FF7A9580EE4]
-	(No symbol) [0x00007FF7A9581072]
-	(No symbol) [0x00007FF7A95718C4]
-	BaseThreadInitThunk [0x00007FF9791F7034+20]
-	RtlUserThreadStart [0x00007FF979442651+33]
+	GetHandleVerifier [0x0026B8E3+45827]
+	(No symbol) [0x001FDCC4]
+	(No symbol) [0x000F150F]
+	(No symbol) [0x000CE133]
+	(No symbol) [0x0015949F]
+	(No symbol) [0x0016B8E6]
+	(No symbol) [0x00152B96]
+	(No symbol) [0x00126998]
+	(No symbol) [0x0012751D]
+	GetHandleVerifier [0x00524513+2899763]
+	GetHandleVerifier [0x0057793D+3240797]
+	GetHandleVerifier [0x002F13B4+593364]
+	GetHandleVerifier [0x002F82DC+621820]
+	(No symbol) [0x002070A4]
+	(No symbol) [0x002037A8]
+	(No symbol) [0x00203947]
+	(No symbol) [0x001F59FE]
+	BaseThreadInitThunk [0x75E4FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77597A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77597A4E+238]
+	(No symbol) [0x00000000]
 </msg>
-<status status="FAIL" starttime="20240531 08:14:17.292" endtime="20240531 08:14:17.312"/>
+<status status="FAIL" starttime="20240531 08:43:37.841" endtime="20240531 08:43:37.871"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
 <arg>${email_input}</arg>
-<status status="NOT RUN" starttime="20240531 08:14:17.312" endtime="20240531 08:14:17.312"/>
+<status status="NOT RUN" starttime="20240531 08:43:37.871" endtime="20240531 08:43:37.871"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${email_input}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.313" endtime="20240531 08:14:17.313"/>
+<status status="NOT RUN" starttime="20240531 08:43:37.872" endtime="20240531 08:43:37.872"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
 <arg>${pass_input}</arg>
-<status status="NOT RUN" starttime="20240531 08:14:17.313" endtime="20240531 08:14:17.313"/>
+<status status="NOT RUN" starttime="20240531 08:43:37.872" endtime="20240531 08:43:37.872"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${pass_input}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.313" endtime="20240531 08:14:17.313"/>
+<status status="NOT RUN" starttime="20240531 08:43:37.872" endtime="20240531 08:43:37.872"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
 <arg>${submit_button}</arg>
-<status status="NOT RUN" starttime="20240531 08:14:17.313" endtime="20240531 08:14:17.314"/>
+<status status="NOT RUN" starttime="20240531 08:43:37.873" endtime="20240531 08:43:37.873"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${submit_button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.314" endtime="20240531 08:14:17.314"/>
+<status status="NOT RUN" starttime="20240531 08:43:37.873" endtime="20240531 08:43:37.873"/>
 </kw>
-<status status="FAIL" starttime="20240531 08:14:17.291" endtime="20240531 08:14:17.314"/>
-</kw>
-<kw name="Open Specified Bot" library="Keywords">
-<arg>${bot_names_list}</arg>
-<arg>${my_api10_bot_name}</arg>
-<status status="NOT RUN" starttime="20240531 08:14:17.314" endtime="20240531 08:14:17.314"/>
-</kw>
-<kw name="Go To Chatflow Tab" library="Keywords">
-<status status="NOT RUN" starttime="20240531 08:14:17.315" endtime="20240531 08:14:17.315"/>
-</kw>
-<kw name="Select group and chatflow item" library="Keywords">
-<arg>${group1}</arg>
-<arg>${textitem2}</arg>
-<status status="NOT RUN" starttime="20240531 08:14:17.315" endtime="20240531 08:14:17.315"/>
+<status status="FAIL" starttime="20240531 08:43:37.841" endtime="20240531 08:43:37.873"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
-<arg>${my_new_rn_button}</arg>
-<status status="NOT RUN" starttime="20240531 08:14:17.315" endtime="20240531 08:14:17.315"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${my_new_rn_button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.315" endtime="20240531 08:14:17.315"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${button_name_input_field}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.316" endtime="20240531 08:14:17.316"/>
-</kw>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>${button_name_input_field}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.316" endtime="20240531 08:14:17.316"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${button_name_input_field}</arg>
-<arg>${my_rn_button_name1}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.316" endtime="20240531 08:14:17.316"/>
-</kw>
-<kw name="Select Radio Button" library="SeleniumLibrary">
-<arg>trans_type</arg>
-<arg>manual</arg>
-<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.316" endtime="20240531 08:14:17.316"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${button_next_action}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.317" endtime="20240531 08:14:17.317"/>
-</kw>
-<kw name="Type In And Press Enter" library="Keywords">
-<arg>${button_next_action}</arg>
-<arg>${my_target_chatflow_item}</arg>
-<status status="NOT RUN" starttime="20240531 08:14:17.317" endtime="20240531 08:14:17.317"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${advanced_settings_popup}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.317" endtime="20240531 08:14:17.317"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${advanced_settings_popup}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.317" endtime="20240531 08:14:17.317"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${user_key_input_field}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.318" endtime="20240531 08:14:17.318"/>
-</kw>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>${user_key_input_field}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.318" endtime="20240531 08:14:17.318"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${user_key_input_field}</arg>
-<arg>${my_ukey_value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.318" endtime="20240531 08:14:17.318"/>
+<arg>${new_app_button}</arg>
+<status status="NOT RUN" starttime="20240531 08:43:37.874" endtime="20240531 08:43:37.874"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${save_button_settings}</arg>
+<arg>${new_app_button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.318" endtime="20240531 08:14:17.318"/>
-</kw>
-<kw name="Select group and chatflow item" library="Keywords">
-<arg>${group1}</arg>
-<arg>${textitem2}</arg>
-<status status="NOT RUN" starttime="20240531 08:14:17.318" endtime="20240531 08:14:17.319"/>
+<status status="NOT RUN" starttime="20240531 08:43:37.874" endtime="20240531 08:43:37.875"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
-<arg>${my_new_rn_button}</arg>
-<status status="NOT RUN" starttime="20240531 08:14:17.319" endtime="20240531 08:14:17.319"/>
+<arg>${new_bot_name}</arg>
+<status status="NOT RUN" starttime="20240531 08:43:37.875" endtime="20240531 08:43:37.875"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${my_new_rn_button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.319" endtime="20240531 08:14:17.319"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${new_bot_name}</arg>
+<arg>${my_api20_bot_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240531 08:43:37.876" endtime="20240531 08:43:37.876"/>
 </kw>
-<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
-<arg>3x</arg>
-<arg>2s</arg>
+<for flavor="IN">
+<var>${value}</var>
+<value>@{checkbox_values}</value>
+<iter>
+<var name="${value}"/>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
 <arg>Click Element</arg>
-<arg>${my_new_rn_button}</arg>
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.319" endtime="20240531 08:14:17.319"/>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20240531 08:43:37.876" endtime="20240531 08:43:37.876"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${button_name_input_field}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.320" endtime="20240531 08:14:17.320"/>
-</kw>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>${button_name_input_field}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.320" endtime="20240531 08:14:17.321"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${button_name_input_field}</arg>
-<arg>${my_rn_button_name2}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.321" endtime="20240531 08:14:17.321"/>
+<status status="NOT RUN" starttime="20240531 08:43:37.876" endtime="20240531 08:43:37.877"/>
+</iter>
+<status status="NOT RUN" starttime="20240531 08:43:37.876" endtime="20240531 08:43:37.877"/>
+</for>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>plan</arg>
+<arg>pro</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="NOT RUN" starttime="20240531 08:43:37.877" endtime="20240531 08:43:37.877"/>
 </kw>
 <kw name="Select Radio Button" library="SeleniumLibrary">
-<arg>trans_type</arg>
-<arg>manual</arg>
+<arg>apiver</arg>
+<arg>2</arg>
 <doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.321" endtime="20240531 08:14:17.321"/>
+<status status="NOT RUN" starttime="20240531 08:43:37.877" endtime="20240531 08:43:37.877"/>
+</kw>
+<kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
+<arg>${company_name_input_field}</arg>
+<status status="NOT RUN" starttime="20240531 08:43:37.878" endtime="20240531 08:43:37.878"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${button_next_action}</arg>
+<arg>${company_name_input_field}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.321" endtime="20240531 08:14:17.322"/>
-</kw>
-<kw name="Type In And Press Enter" library="Keywords">
-<arg>${button_next_action}</arg>
-<arg>${my_target_chatflow_item}</arg>
-<status status="NOT RUN" starttime="20240531 08:14:17.322" endtime="20240531 08:14:17.322"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${advanced_settings_popup}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.322" endtime="20240531 08:14:17.322"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${advanced_settings_popup}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.322" endtime="20240531 08:14:17.322"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${user_key_input_field}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.323" endtime="20240531 08:14:17.323"/>
-</kw>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>${user_key_input_field}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.323" endtime="20240531 08:14:17.323"/>
+<status status="NOT RUN" starttime="20240531 08:43:37.878" endtime="20240531 08:43:37.878"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${user_key_input_field}</arg>
-<arg>${my_ukey_value}</arg>
+<arg>${company_name_input_field}</arg>
+<arg>${my_company_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.324" endtime="20240531 08:14:17.324"/>
+<status status="NOT RUN" starttime="20240531 08:43:37.878" endtime="20240531 08:43:37.878"/>
+</kw>
+<kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
+<arg>${company_name_option}</arg>
+<status status="NOT RUN" starttime="20240531 08:43:37.878" endtime="20240531 08:43:37.879"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${company_name_option}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240531 08:43:37.879" endtime="20240531 08:43:37.879"/>
+</kw>
+<kw name="Wait Until Element Is Visible and Enabled" library="Keywords">
+<arg>${save_bot_settings}</arg>
+<status status="NOT RUN" starttime="20240531 08:43:37.879" endtime="20240531 08:43:37.879"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${save_button_settings}</arg>
+<arg>${save_bot_settings}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240531 08:14:17.324" endtime="20240531 08:14:17.324"/>
+<status status="NOT RUN" starttime="20240531 08:43:37.880" endtime="20240531 08:43:37.881"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<arg>${loader_screen}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="NOT RUN" starttime="20240531 08:43:37.881" endtime="20240531 08:43:37.881"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20240531 08:14:17.325" endtime="20240531 08:14:19.437"/>
+<status status="PASS" starttime="20240531 08:43:37.882" endtime="20240531 08:43:39.992"/>
 </kw>
-<doc>This test adds 2 quick reaction buttons "choice1" and "choice2" to textitem2 in the "group1" chatflow.</doc>
-<tag>AppTab</tag>
+<doc>This test creates a BR V2 API2.0 bot under Evolany Co., Ltd. company</doc>
+<tag>API2.0</tag>
+<tag>NewAppPopup</tag>
 <tag>Regression</tag>
-<tag>Test1</tag>
-<status status="FAIL" starttime="20240531 08:11:35.395" endtime="20240531 08:14:19.438">NoSuchWindowException: Message: no such window: target window already closed
+<status status="FAIL" starttime="20240531 08:43:29.524" endtime="20240531 08:43:39.993">NoSuchWindowException: Message: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=125.0.6422.113)
 Stacktrace:
-	GetHandleVerifier [0x00007FF7A9601522+60802]
-	(No symbol) [0x00007FF7A957AC22]
-	(No symbol) [0x00007FF7A9437CE4]
-	(No symbol) [0x00007FF7A940DFDF]
-	(No symbol) [0x00007FF7A94B1E57]
-	(No symbol) [0x00007FF7A94C98D1]
-	(No symbol) [0x00007FF7A94AA923]
-	(No symbol) [0x00007FF7A9478FEC]
-	(No symbol) [0x00007FF7A9479C21]
-	GetHandleVerifier [0x00007FF7A990413D+3217821]
-	GetHandleVerifier [0x00007FF7A99460D7+3488055]
-	GetHandleVerifier [0x00007FF7A993F05F+3459263]
-	GetHandleVerifier [0x00007FF7A96BB866+823494]
-	(No symbol) [0x00007FF7A9585FBF]
-	(No symbol) [0x00007FF7A9580EE4]
-	(No symbol) [0x00007FF7A9581072]
-	(No symbol) [0x00007FF7A95718C4]
-	BaseThreadInitThunk [0x00007FF9791F7034+20]
-	RtlUserThreadStart [0x00007FF979442651+33]
+	GetHandleVerifier [0x0026B8E3+45827]
+	(No symbol) [0x001FDCC4]
+	(No symbol) [0x000F150F]
+	(No symbol) [0x000CE133]
+	(No symbol) [0x0015949F]
+	(No symbol) [0x0016B8E6]
+	(No symbol) [0x00152B96]
+	(No symbol) [0x00126998]
+	(No symbol) [0x0012751D]
+	GetHandleVerifier [0x00524513+2899763]
+	GetHandleVerifier [0x0057793D+3240797]
+	GetHandleVerifier [0x002F13B4+593364]
+	GetHandleVerifier [0x002F82DC+621820]
+	(No symbol) [0x002070A4]
+	(No symbol) [0x002037A8]
+	(No symbol) [0x00203947]
+	(No symbol) [0x001F59FE]
+	BaseThreadInitThunk [0x75E4FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77597A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77597A4E+238]
+	(No symbol) [0x00000000]
 </status>
 </test>
-<status status="FAIL" starttime="20240531 08:11:35.084" endtime="20240531 08:14:19.439"/>
+<status status="FAIL" starttime="20240531 08:43:29.202" endtime="20240531 08:43:39.993"/>
 </suite>
 <statistics>
 <total>
 <stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">AppTab</stat>
+<stat pass="0" fail="1" skip="0">API2.0</stat>
+<stat pass="0" fail="1" skip="0">NewAppPopup</stat>
 <stat pass="0" fail="1" skip="0">Regression</stat>
-<stat pass="0" fail="1" skip="0">Test1</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Group1">Group1</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="AddBots">AddBots</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20240531 08:14:17.304" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+<msg timestamp="20240531 08:43:37.866" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=125.0.6422.113)
 Stacktrace:
-	GetHandleVerifier [0x00007FF7A9601522+60802]
-	(No symbol) [0x00007FF7A957AC22]
-	(No symbol) [0x00007FF7A9437CE4]
-	(No symbol) [0x00007FF7A940DFDF]
-	(No symbol) [0x00007FF7A94B1E57]
-	(No symbol) [0x00007FF7A94C98D1]
-	(No symbol) [0x00007FF7A94AA923]
-	(No symbol) [0x00007FF7A9478FEC]
-	(No symbol) [0x00007FF7A9479C21]
-	GetHandleVerifier [0x00007FF7A990413D+3217821]
-	GetHandleVerifier [0x00007FF7A99460D7+3488055]
-	GetHandleVerifier [0x00007FF7A993F05F+3459263]
-	GetHandleVerifier [0x00007FF7A96BB866+823494]
-	(No symbol) [0x00007FF7A9585FBF]
-	(No symbol) [0x00007FF7A9580EE4]
-	(No symbol) [0x00007FF7A9581072]
-	(No symbol) [0x00007FF7A95718C4]
-	BaseThreadInitThunk [0x00007FF9791F7034+20]
-	RtlUserThreadStart [0x00007FF979442651+33]
+	GetHandleVerifier [0x0026B8E3+45827]
+	(No symbol) [0x001FDCC4]
+	(No symbol) [0x000F150F]
+	(No symbol) [0x000CE133]
+	(No symbol) [0x0015949F]
+	(No symbol) [0x0016B8E6]
+	(No symbol) [0x00152B96]
+	(No symbol) [0x00126998]
+	(No symbol) [0x0012751D]
+	GetHandleVerifier [0x00524513+2899763]
+	GetHandleVerifier [0x0057793D+3240797]
+	GetHandleVerifier [0x002F13B4+593364]
+	GetHandleVerifier [0x002F82DC+621820]
+	(No symbol) [0x002070A4]
+	(No symbol) [0x002037A8]
+	(No symbol) [0x00203947]
+	(No symbol) [0x001F59FE]
+	BaseThreadInitThunk [0x75E4FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77597A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77597A4E+238]
+	(No symbol) [0x00000000]
 </msg>
 </errors>
 </robot>

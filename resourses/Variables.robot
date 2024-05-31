@@ -3,8 +3,8 @@ ${url}   https://pre.bonp.me//member
 ${IMAGE_PATH}  C:\\Users\\Professional\\PycharmProjects\\RobotFramework\\uploaddata
 ${CHROMEDRIVER_PATH}   C:\\Users\\Professional\\PycharmProjects\\RobotFramework\\drivers\\chromedriver.exe
 #Bot Names
-${my_api10_bot_name}   test1
-${my_api20_bot_name}   test2
+${my_api10_bot_name}   123-api10
+${my_api20_bot_name}   123-api20
 #Login Page
 ${options}    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
 ${environment}   https://pre.bonp.me//member

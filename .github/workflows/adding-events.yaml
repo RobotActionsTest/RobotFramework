@@ -1,4 +1,4 @@
-name: Robot Framework Test Adding Events
+name: Test Image upload
 
 on:
   workflow_dispatch:
@@ -18,6 +18,10 @@ jobs:
         - name: Install pip dependencies
           run: |
             python.exe -m pip install --upgrade pip
+            pip install robotframework
+            pip install robotframework-seleniumlibrary
+            python -m pip install --upgrade pip
+            pip install pyautogui
             python -m pip install -r requirement.txt
 
         - name: Run Test
