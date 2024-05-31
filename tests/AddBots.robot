@@ -11,7 +11,7 @@ create API1.0 bot
     ${my_company_name}   Set Variable   Evolany Co., Ltd.
 
     [Documentation]    This test creates a BR V2 API1.0 bot under Evolany Co., Ltd. company
-    [Tags]   NewAppPopup   API1.0   Regression   Test1   Test2
+    [Tags]   NewAppPopup   API1.0   Regression
     [Setup]    Setup Chrome Webdriver New
                Login   ${credentials}[email]   ${credentials}[password]
     [Teardown]    Close Browser

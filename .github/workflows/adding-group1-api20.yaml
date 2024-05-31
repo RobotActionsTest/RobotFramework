@@ -1,4 +1,4 @@
-name: API2.0 Adding Group1
+name: Adding Bots
 
 on:
   workflow_dispatch:
@@ -16,16 +16,16 @@ jobs:
             key: ${{ runner.os }}-pip-${{ hashFiles('**/requirement.txt') }}
 
         - name: Install pip dependencies
-            run: |
-              pip install robotframework
-              pip install robotframework-seleniumlibrary
-              python -m pip install --upgrade pip
-              pip install pyautogui
-              python -m pip install -r requirement.txt
+          run: |
+            python.exe -m pip install --upgrade pip
+            pip install robotframework
+            pip install robotframework-seleniumlibrary
+            python -m pip install --upgrade pip
+            pip install pyautogui
 
         - name: Run Test
           run: |
-            python -m robot --outputdir reports -x junit-report.xml --include API20 "tests/Group1.robot"
+            python -m robot --outputdir reports -x junit-report.xml --include Image "tests/AddBots.robot"
           working-directory: ${{ github.workspace }}
 
         - name: Publish test results
