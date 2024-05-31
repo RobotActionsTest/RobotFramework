@@ -1,4 +1,4 @@
-name: Robot Framework Test Booking API1.0
+name: API1.0 Booking Group
 
 on:
   workflow_dispatch:
@@ -18,11 +18,15 @@ jobs:
         - name: Install pip dependencies
           run: |
             python.exe -m pip install --upgrade pip
+            pip install robotframework
+            pip install robotframework-seleniumlibrary
+            python -m pip install --upgrade pip
+            pip install pyautogui
             python -m pip install -r requirement.txt
 
         - name: Run Test
           run: |
-            python -m robot --outputdir reports -x junit-report.xml --include Booking "tests/Booking.robot"
+            python -m robot --outputdir reports -x junit-report.xml --include API10 "tests/Booking.robot"
           working-directory: ${{ github.workspace }}
 
         - name: Publish test results
