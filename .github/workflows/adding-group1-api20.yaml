@@ -1,4 +1,4 @@
-name: Adding Bots
+name: API2.0 Adding Group1
 
 on:
   workflow_dispatch:
@@ -25,7 +25,7 @@ jobs:
 
         - name: Run Test
           run: |
-            python -m robot --outputdir reports -x junit-report.xml --include Test1 "tests/AddBots.robot"
+            python -m robot --outputdir reports -x junit-report.xml --include API20 "tests/Group1.robot"
           working-directory: ${{ github.workspace }}
 
         - name: Publish test results
